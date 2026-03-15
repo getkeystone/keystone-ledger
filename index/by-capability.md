@@ -138,3 +138,49 @@ CI gates, dist leak guards, and corpus lint enforcement.
 | Milestone | Summary | Evidence class |
 |-----------|---------|---------------|
 | [KDAT-021](../milestones/KDAT-021.md) | Orphan sidecar CI gate | Proven on current branch |
+
+---
+
+## Backup, restore, and drill
+
+Backup bundles, restore pipeline, supply chain manifest, and scheduled drills.
+
+| Milestone | Summary | Evidence class |
+|-----------|---------|---------------|
+| [KDAT-022](../milestones/KDAT-022.md) | Backup + restore with smoke verification | Proven on current branch |
+| [KDAT-031](../milestones/KDAT-031.md) | Restore drill + manifest in backups | Proven on current branch |
+| [KDAT-034](../milestones/KDAT-034.md) | Restore enforcement: modern vs. legacy bundle | Proven on current branch |
+| [KDAT-035](../milestones/KDAT-035.md) | Bundle config + trust bootstrap | Proven on current branch |
+| [KDAT-036](../milestones/KDAT-036.md) | Scheduled cross-host restore drill | Proven on current branch |
+
+---
+
+## Supply chain integrity
+
+Image digest pinning, manifest generation, and release input verification.
+
+| Milestone | Summary | Evidence class |
+|-----------|---------|---------------|
+| [KDAT-030](../milestones/KDAT-030.md) | Pinned images + supply chain manifest | Proven on current branch |
+
+---
+
+## Audit export and offline verification
+
+Tamper-evident audit bundles and offline chain verification.
+
+| Milestone | Summary | Evidence class |
+|-----------|---------|---------------|
+| [KDAT-032](../milestones/KDAT-032.md) | Audit export + offline verifier | Proven on current branch |
+| [KDAT-037](../milestones/KDAT-037.md) | Audit verifier: redact env var names | Proven on current branch |
+
+---
+
+## Operational monitoring and hygiene
+
+Scheduled maintenance, resource monitoring, and alerting.
+
+| Milestone | Summary | Evidence class |
+|-----------|---------|---------------|
+| [KDAT-028](../milestones/KDAT-028.md) | Scheduled DB hygiene | Proven on current branch |
+| [KDAT-029](../milestones/KDAT-029.md) | Resource sentinel timer | Proven on current branch |

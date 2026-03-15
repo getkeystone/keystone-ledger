@@ -80,15 +80,25 @@ pages as if they were independently proven milestones.
 | 2026-03-14 | KDAT-025 | Cloudflare Access smoke proof |
 | 2026-03-14 | KDAT-026 | Public demo reset timer |
 | 2026-03-14 | KDAT-027 | KDAT log publisher + external CF smoke timer |
+| 2026-03-14 | KDAT-028 | Scheduled DB hygiene |
+| 2026-03-14 | KDAT-029 | Resource sentinel timer |
+| 2026-03-14 | KDAT-030 | Pinned images + supply chain manifest |
+| 2026-03-14 | KDAT-031 | Restore drill + manifest in backups |
+| 2026-03-14 | KDAT-032 | Audit export + offline verifier |
+| 2026-03-14 | KDAT-034 | Restore enforcement: modern vs. legacy bundle |
+| 2026-03-14 | KDAT-035 | Bundle config + trust bootstrap |
+| 2026-03-14 | KDAT-036 | Scheduled cross-host restore drill |
+| 2026-03-15 | KDAT-037 | Audit verifier: redact env var names |
 
 ---
 
 ## Evidence log metadata
 
 - Branch: lrfd-backend-bootstrap
-- Log generated: 2026-03-14T13:27:36Z (initial); extended 2026-03-14 for KDAT-022–026; extended 2026-03-14 for KDAT-027
-- keystone-gov HEAD at KDAT-027 extension: `c0a9a27`
-- keystone-console HEAD at KDAT-027 extension: `3e4f589`
-- keystone-deploy HEAD at KDAT-027 extension: `36fe893` (includes KDAT-027 deliveries)
+- Log generated: 2026-03-14T13:27:36Z (initial); extended 2026-03-14 for KDAT-022–026; extended 2026-03-14 for KDAT-027; extended 2026-03-15 for KDAT-028–037
+- keystone-gov HEAD at KDAT-028–037 extension: `c0a9a27`
+- keystone-console HEAD at KDAT-028–037 extension: `3e4f589`
+- keystone-deploy HEAD at KDAT-028–037 extension: `94e71ec` (includes KDAT-028–037 deliveries)
+- Prior HEAD SHAs (KDAT-027 extension): gov `c0a9a27`, console `3e4f589`, deploy `36fe893`
 - Prior HEAD SHAs (KDAT-022–026 extension): gov `b4b34c8`, console `b254491`, deploy `3d27116`
 - Prior HEAD SHAs (initial log): gov `93aa470`, console `8f7abd5`, deploy `3dbaaa0`

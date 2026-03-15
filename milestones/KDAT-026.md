@@ -2,7 +2,7 @@
 
 **Status:** Proven
 **Evidence class:** Proven on current branch
-**Publication status:** Needs review
+**Publication status:** Ready to publish
 
 ---
 
@@ -63,6 +63,8 @@ an explicit error. The timer is hardened with `NoNewPrivileges`,
 | Item | Location | Notes |
 |------|----------|-------|
 | Delivery commit | keystone-deploy `3d27116` | test(kdat-026) — 5 files, 217 insertions |
+| Verification commit | keystone-deploy `cb8e02d` | test(kdat-026): structural verification script |
+| Verification script | `scripts/test_kdat026_timer.sh` | PASS 13 / FAIL 0 / SKIP 0; 11 CI-safe + 2 live assertions |
 | Reset script (extended) | `scripts/public-reset.sh` | Preflights: PDM check + token check |
 | Systemd service unit | `docs/systemd/public-reset.service` | Hardened oneshot unit |
 | Systemd timer unit | `docs/systemd/public-reset.timer` | Daily 04:15, Persistent=true |
@@ -73,24 +75,35 @@ an explicit error. The timer is hardened with `NoNewPrivileges`,
 
 ## Verification and tests
 
-- Guard test: run installer with `PUBLIC_DEMO_MODE=0` → exits with
-  `[FAIL] PUBLIC_DEMO_MODE is not enabled` (non-zero exit code)
-- Active timer check: `systemctl --user status public-reset.timer` →
-  `active (waiting) Trigger: 04:15:00 ADT`
-- Reset confirmation: `journalctl --user -u public-reset.service -n 50`
-  → `[PASS] Demo state reset complete.`
+**`scripts/test_kdat026_timer.sh`** — 13 assertions (11 CI-safe, 2 live-system); PASS 13 / FAIL 0 / SKIP 0:
 
-No automated CI harness for the timer firing itself (systemd constraint).
-Guard behavior (installer refusal) is the primary verifiable assertion.
+| # | Assertion | CI-safe? |
+|---|-----------|----------|
+| 1 | `systemd-analyze verify docs/systemd/public-reset.service` → clean | Yes |
+| 2 | `systemd-analyze verify docs/systemd/public-reset.timer` → clean | Yes |
+| 3 | `public-reset.service` contains `NoNewPrivileges=yes` | Yes |
+| 4 | `public-reset.service` contains `ProtectSystem=strict` | Yes |
+| 5 | `public-reset.service` contains `PrivateTmp=yes` | Yes |
+| 6 | `public-reset.timer` contains `OnCalendar=*-*-* 04:15:00` | Yes |
+| 7 | `public-reset.timer` contains `Persistent=true` | Yes |
+| 8 | `scripts/public-reset.sh` exists and executable | Yes |
+| 9 | `scripts/install-public-reset-timer.sh` exists and executable | Yes |
+| 10 | Installer guard A: refuses when `PUBLIC_DEMO_MODE` not set (temp HOME, CI-safe) | Yes |
+| 11 | Installer guard B: refuses when `PUBLIC_DEMO_RESET_TOKEN` unset (temp HOME, CI-safe) | Yes |
+| 12 | `public-reset.timer` is active (live system) | No — skips if no user session |
+| 13 | Next trigger confirmed via `list-timers` | No — skips if no user session |
+
+All 11 CI-safe assertions pass without a live systemd user session. Guards are tested
+by running the installer against a crafted temp `HOME`, avoiding any live state mutation.
 
 ---
 
 ## Known limitations and caveats
 
-- Publication status is "Needs review" because the daily timer trigger cannot
-  be exercised in a stateless test environment. The guard behavior and unit
-  configuration are verified; the actual daily fire requires a live system
-  with linger enabled.
+- The daily timer trigger cannot be fully exercised in a stateless CI environment.
+  Structural assertions (unit lint, hardening, schedule, guards, executables) are
+  CI-safe via `test_kdat026_timer.sh`. Live timer active and next trigger confirmed
+  on the delivery system (assertions 12–13).
 - `Persistent=true` means the timer fires on the next system start if it
   missed its window; this is intentional but should be documented for operators
   who restart the host during the 04:15 window.
@@ -101,8 +114,12 @@ Guard behavior (installer refusal) is the primary verifiable assertion.
 
 ## Source basis
 
-Branch delivery commit on lrfd-backend-bootstrap. Date: 2026-03-14.
-Commit SHA: `3d27116afe54c544fe0ed2944900065f5f489b09`
+Two commits on lrfd-backend-bootstrap. Date: 2026-03-14.
+
+| Commit | Purpose |
+|--------|---------|
+| `3d27116` | Delivery: timer units, installer, guard logic |
+| `cb8e02d` | Verification: `test_kdat026_timer.sh` PASS 13/FAIL 0/SKIP 0 |
 
 ---
 
@@ -110,10 +127,14 @@ Commit SHA: `3d27116afe54c544fe0ed2944900065f5f489b09`
 
 ```bash
 cd ~/keystone/keystone-deploy
-# Verify the guard (safe — does not install anything):
-bash scripts/install-public-reset-timer.sh
-# Expected with PUBLIC_DEMO_MODE=0: [FAIL] PUBLIC_DEMO_MODE is not enabled
 
-# With PUBLIC_DEMO_MODE=1 and token set — verify timer is active:
-systemctl --user status public-reset.timer
+# Full structural + guard verification (CI-safe — assertions 1–11):
+bash scripts/test_kdat026_timer.sh
+# Expected: PASS 13 / FAIL 0 / SKIP 0
+
+# Live timer status and next trigger:
+systemctl --user list-timers public-reset.timer --no-pager
+
+# Journal from last run (if fired):
+journalctl --user -u public-reset.service -n 50 --no-pager
 ```

@@ -18,6 +18,21 @@
 | [KDAT-019](../milestones/KDAT-019.md) | Domain + content_kind governance |
 | [KDAT-020](../milestones/KDAT-020.md) | Suggested queries panel |
 | [KDAT-021](../milestones/KDAT-021.md) | Orphan sidecar CI gate |
+| [KDAT-022](../milestones/KDAT-022.md) | Backup + restore with smoke verification |
+| [KDAT-023](../milestones/KDAT-023.md) | Evidence signing key custody + rotation + trust store |
+| [KDAT-024](../milestones/KDAT-024.md) | Operational scope guard + CLARIFY_MODEL clarifier |
+| [KDAT-025](../milestones/KDAT-025.md) | Cloudflare Access smoke proof |
+| [KDAT-026](../milestones/KDAT-026.md) | Public demo reset timer |
+| [KDAT-027](../milestones/KDAT-027.md) | KDAT log publisher + external CF smoke timer |
+| [KDAT-028](../milestones/KDAT-028.md) | Scheduled DB hygiene |
+| [KDAT-029](../milestones/KDAT-029.md) | Resource sentinel timer |
+| [KDAT-030](../milestones/KDAT-030.md) | Pinned images + supply chain manifest |
+| [KDAT-031](../milestones/KDAT-031.md) | Restore drill + manifest in backups |
+| [KDAT-032](../milestones/KDAT-032.md) | Audit export + offline verifier |
+| [KDAT-034](../milestones/KDAT-034.md) | Restore enforcement: modern vs. legacy bundle |
+| [KDAT-035](../milestones/KDAT-035.md) | Bundle config + trust bootstrap |
+| [KDAT-036](../milestones/KDAT-036.md) | Scheduled cross-host restore drill |
+| [KDAT-037](../milestones/KDAT-037.md) | Audit verifier: redact env var names |
 
 ---
 
@@ -50,3 +65,11 @@
 | Milestone | Summary |
 |-----------|---------|
 | [KDAT-007](../milestones/KDAT-007.md) | Supervisor workflow |
+
+---
+
+## Unknown
+
+| Milestone | Summary |
+|-----------|---------|
+| [KDAT-033](../milestones/KDAT-033.md) | (Unassigned — gap in sequence; no evidence) |

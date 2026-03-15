@@ -56,7 +56,7 @@ Full definitions: [docs/evidence-classes.md](../docs/evidence-classes.md)
 - [KDAT-001A](KDAT-001A.md) — Single-machine governed retrieval proof
 - [KDAT-002](KDAT-002.md) — Console operator workflow UX
 
-### Branch-proven — Ready to publish (16)
+### Branch-proven — Ready to publish (26)
 - [KDAT-003](KDAT-003.md) — Document governance UI + APIs
 - [KDAT-008](KDAT-008.md) — Case pack offline verifier
 - [KDAT-012](KDAT-012.md) — Structured requirements extraction
@@ -72,14 +72,26 @@ Full definitions: [docs/evidence-classes.md](../docs/evidence-classes.md)
 - [KDAT-023](KDAT-023.md) — Evidence signing key custody + rotation + trust store
 - [KDAT-024](KDAT-024.md) — Operational scope guard + CLARIFY_MODEL clarifier
 - [KDAT-025](KDAT-025.md) — Cloudflare Access smoke proof
+- [KDAT-026](KDAT-026.md) — Public demo reset timer
 - [KDAT-027](KDAT-027.md) — KDAT log publisher + external CF smoke timer
+- [KDAT-028](KDAT-028.md) — Scheduled DB hygiene
+- [KDAT-029](KDAT-029.md) — Resource sentinel timer
+- [KDAT-030](KDAT-030.md) — Pinned images + supply chain manifest
+- [KDAT-031](KDAT-031.md) — Restore drill + manifest in backups
+- [KDAT-032](KDAT-032.md) — Audit export + offline verifier
+- [KDAT-034](KDAT-034.md) — Restore enforcement: modern vs. legacy bundle
+- [KDAT-035](KDAT-035.md) — Bundle config + trust bootstrap
+- [KDAT-036](KDAT-036.md) — Scheduled cross-host restore drill
+- [KDAT-037](KDAT-037.md) — Audit verifier: redact env var names
 
-### Branch-proven — Needs review (2)
+### Branch-proven — Needs review (1)
 - [KDAT-020](KDAT-020.md) — Suggested queries panel (delivery commit exists; no regression lock)
-- [KDAT-026](KDAT-026.md) — Public demo reset timer (systemd timer; environment-dependent verification)
 
 ### Doc-only
 - [KDAT-007](KDAT-007.md) — Supervisor workflow (doc-only reference)
+
+### Planned / Unknown
+- [KDAT-033](KDAT-033.md) — (Unassigned — gap in sequence)
 
 ### In validation (curated summary)
 - [KDAT-004](KDAT-004.md) — Signed deterministic evidence bundles
@@ -96,7 +108,8 @@ Full definitions: [docs/evidence-classes.md](../docs/evidence-classes.md)
 Note: Some milestones (KDAT-007) are doc-only references. Some (KDAT-001A,
 KDAT-002) are historical baselines. Some (KDAT-004 through KDAT-006,
 KDAT-009 through KDAT-010) have curated summaries but no branch delivery
-commits in the current log. Evidence class is the definitive signal.
+commits in the current log. KDAT-033 is a gap in the sequence with no
+evidence. Evidence class is the definitive signal.
 
-Ledger currently covers KDAT-001A through KDAT-027. Publication readiness
+Ledger currently covers KDAT-001A through KDAT-037. Publication readiness
 varies by milestone; see individual pages.
