@@ -56,7 +56,7 @@ Full definitions: [docs/evidence-classes.md](../docs/evidence-classes.md)
 - [KDAT-001A](KDAT-001A.md) — Single-machine governed retrieval proof
 - [KDAT-002](KDAT-002.md) — Console operator workflow UX
 
-### Branch-proven — Ready to publish (35)
+### Branch-proven — Ready to publish (40)
 - [KDAT-003](KDAT-003.md) — Document governance UI + APIs
 - [KDAT-008](KDAT-008.md) — Case pack offline verifier
 - [KDAT-012](KDAT-012.md) — Structured requirements extraction
@@ -91,13 +91,15 @@ Full definitions: [docs/evidence-classes.md](../docs/evidence-classes.md)
 - [KDAT-043](KDAT-043.md) — Ops baseline and drift detection
 - [KDAT-044](KDAT-044.md) — CF supervisor workflow proof (case pack + offline verify)
 - [KDAT-045](KDAT-045.md) — Cloudflared JWT helper + guarded CF workflow gate
+- [KDAT-046](KDAT-046.md) — Run ID tagging and ephemeral write purge
 - [KDAT-047](KDAT-047.md) — DB schema contract check for run_id
+- [KDAT-048](KDAT-048.md) — Deterministic CF JWT cache + acquisition gate
+- [KDAT-049](KDAT-049.md) — Pilot health pack bundle (redacted)
+- [KDAT-050](KDAT-050.md) — Health pack sanitization for CF log noise
+- [KDAT-051](KDAT-051.md) — CF gate snapshot in health pack (sanitized, no secrets)
 
 ### Branch-proven — Needs review (1)
 - [KDAT-020](KDAT-020.md) — Suggested queries panel (delivery commit exists; no regression lock)
-
-### Underdocumented — Needs review (1)
-- [KDAT-046](KDAT-046.md) — Run ID tagging and ephemeral write purge (working tree; delivery commit pending)
 
 ### Doc-only
 - [KDAT-007](KDAT-007.md) — Supervisor workflow (doc-only reference)
@@ -123,5 +125,5 @@ KDAT-009 through KDAT-010) have curated summaries but no branch delivery
 commits in the current log. KDAT-033 is a gap in the sequence with no
 evidence. Evidence class is the definitive signal.
 
-Ledger currently covers KDAT-001A through KDAT-047. Publication readiness
+Ledger currently covers KDAT-001A through KDAT-051. Publication readiness
 varies by milestone; see individual pages.

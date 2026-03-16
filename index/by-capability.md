@@ -212,6 +212,7 @@ CF Access JWT acquisition, guarded CF workflow smoke, and supervisor workflow pr
 | [KDAT-027](../milestones/KDAT-027.md) | External CF smoke timer | Proven on current branch |
 | [KDAT-044](../milestones/KDAT-044.md) | CF supervisor workflow proof (case pack + offline verify) | Proven on current branch |
 | [KDAT-045](../milestones/KDAT-045.md) | Cloudflared JWT helper + guarded CF workflow gate | Proven on current branch |
+| [KDAT-048](../milestones/KDAT-048.md) | Deterministic CF JWT cache + acquisition gate | Proven on current branch |
 
 ---
 
@@ -221,5 +222,17 @@ Run ID schema contract, ephemeral write tagging, and purge.
 
 | Milestone | Summary | Evidence class |
 |-----------|---------|---------------|
-| [KDAT-046](../milestones/KDAT-046.md) | Run ID tagging + ephemeral write purge | Underdocumented |
+| [KDAT-046](../milestones/KDAT-046.md) | Run ID tagging + ephemeral write purge | Proven on current branch |
 | [KDAT-047](../milestones/KDAT-047.md) | DB schema contract check for run_id | Proven on current branch |
+
+---
+
+## Diagnostic health pack
+
+Redacted portable diagnostic bundle for offline review and support sharing.
+
+| Milestone | Summary | Evidence class |
+|-----------|---------|---------------|
+| [KDAT-049](../milestones/KDAT-049.md) | Pilot health pack bundle (redacted) | Proven on current branch |
+| [KDAT-050](../milestones/KDAT-050.md) | Health pack sanitization for CF log noise | Proven on current branch |
+| [KDAT-051](../milestones/KDAT-051.md) | CF gate snapshot in health pack (sanitized, no secrets) | Proven on current branch |

@@ -2,7 +2,7 @@
 
 ---
 
-## Proven — Ready to publish (35)
+## Proven — Ready to publish (40)
 
 Milestones with direct branch delivery commits, cited tests, and smoke locks.
 
@@ -42,7 +42,12 @@ Milestones with direct branch delivery commits, cited tests, and smoke locks.
 | [KDAT-043](../milestones/KDAT-043.md) | Ops baseline and drift detection |
 | [KDAT-044](../milestones/KDAT-044.md) | CF supervisor workflow proof (case pack + offline verify) |
 | [KDAT-045](../milestones/KDAT-045.md) | Cloudflared JWT helper + guarded CF workflow gate |
+| [KDAT-046](../milestones/KDAT-046.md) | Run ID tagging and ephemeral write purge |
 | [KDAT-047](../milestones/KDAT-047.md) | DB schema contract check for run_id |
+| [KDAT-048](../milestones/KDAT-048.md) | Deterministic CF JWT cache + acquisition gate |
+| [KDAT-049](../milestones/KDAT-049.md) | Pilot health pack bundle (redacted) |
+| [KDAT-050](../milestones/KDAT-050.md) | Health pack sanitization for CF log noise |
+| [KDAT-051](../milestones/KDAT-051.md) | CF gate snapshot in health pack (sanitized, no secrets) |
 
 ## Proven — Needs review (1)
 
@@ -51,16 +56,6 @@ Delivery commit exists; verification is environment-dependent or lacks a regress
 | Milestone | Summary |
 |-----------|---------|
 | [KDAT-020](../milestones/KDAT-020.md) | Suggested queries panel — no smoke lock; do not cite as fully validated |
-
----
-
-## Underdocumented — Needs review (1)
-
-Work is present in the working tree but no delivery commit exists.
-
-| Milestone | Summary |
-|-----------|---------|
-| [KDAT-046](../milestones/KDAT-046.md) | Run ID tagging + ephemeral write purge — delivery commit pending |
 
 ---
 
