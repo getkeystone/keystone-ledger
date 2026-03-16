@@ -2,7 +2,7 @@
 
 ---
 
-## Proven — Ready to publish (26)
+## Proven — Ready to publish (35)
 
 Milestones with direct branch delivery commits, cited tests, and smoke locks.
 
@@ -34,6 +34,15 @@ Milestones with direct branch delivery commits, cited tests, and smoke locks.
 | [KDAT-035](../milestones/KDAT-035.md) | Bundle config + trust bootstrap |
 | [KDAT-036](../milestones/KDAT-036.md) | Scheduled cross-host restore drill |
 | [KDAT-037](../milestones/KDAT-037.md) | Audit verifier: redact env var names |
+| [KDAT-038](../milestones/KDAT-038.md) | Non-overlap locks for scheduled maintenance jobs |
+| [KDAT-039](../milestones/KDAT-039.md) | Standardise timer env loading + preflight + verify harness |
+| [KDAT-040](../milestones/KDAT-040.md) | Repo cleanliness guard for destructive ops |
+| [KDAT-041](../milestones/KDAT-041.md) | Maintenance window skip + timer jitter |
+| [KDAT-042](../milestones/KDAT-042.md) | Ops status snapshot (text + JSON) |
+| [KDAT-043](../milestones/KDAT-043.md) | Ops baseline and drift detection |
+| [KDAT-044](../milestones/KDAT-044.md) | CF supervisor workflow proof (case pack + offline verify) |
+| [KDAT-045](../milestones/KDAT-045.md) | Cloudflared JWT helper + guarded CF workflow gate |
+| [KDAT-047](../milestones/KDAT-047.md) | DB schema contract check for run_id |
 
 ## Proven — Needs review (1)
 
@@ -42,6 +51,16 @@ Delivery commit exists; verification is environment-dependent or lacks a regress
 | Milestone | Summary |
 |-----------|---------|
 | [KDAT-020](../milestones/KDAT-020.md) | Suggested queries panel — no smoke lock; do not cite as fully validated |
+
+---
+
+## Underdocumented — Needs review (1)
+
+Work is present in the working tree but no delivery commit exists.
+
+| Milestone | Summary |
+|-----------|---------|
+| [KDAT-046](../milestones/KDAT-046.md) | Run ID tagging + ephemeral write purge — delivery commit pending |
 
 ---
 

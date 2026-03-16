@@ -56,7 +56,7 @@ Full definitions: [docs/evidence-classes.md](../docs/evidence-classes.md)
 - [KDAT-001A](KDAT-001A.md) — Single-machine governed retrieval proof
 - [KDAT-002](KDAT-002.md) — Console operator workflow UX
 
-### Branch-proven — Ready to publish (26)
+### Branch-proven — Ready to publish (35)
 - [KDAT-003](KDAT-003.md) — Document governance UI + APIs
 - [KDAT-008](KDAT-008.md) — Case pack offline verifier
 - [KDAT-012](KDAT-012.md) — Structured requirements extraction
@@ -83,9 +83,21 @@ Full definitions: [docs/evidence-classes.md](../docs/evidence-classes.md)
 - [KDAT-035](KDAT-035.md) — Bundle config + trust bootstrap
 - [KDAT-036](KDAT-036.md) — Scheduled cross-host restore drill
 - [KDAT-037](KDAT-037.md) — Audit verifier: redact env var names
+- [KDAT-038](KDAT-038.md) — Non-overlap locks for scheduled maintenance jobs
+- [KDAT-039](KDAT-039.md) — Standardise timer env loading + preflight + verify harness
+- [KDAT-040](KDAT-040.md) — Repo cleanliness guard for destructive ops
+- [KDAT-041](KDAT-041.md) — Maintenance window skip + timer jitter
+- [KDAT-042](KDAT-042.md) — Ops status snapshot (text + JSON)
+- [KDAT-043](KDAT-043.md) — Ops baseline and drift detection
+- [KDAT-044](KDAT-044.md) — CF supervisor workflow proof (case pack + offline verify)
+- [KDAT-045](KDAT-045.md) — Cloudflared JWT helper + guarded CF workflow gate
+- [KDAT-047](KDAT-047.md) — DB schema contract check for run_id
 
 ### Branch-proven — Needs review (1)
 - [KDAT-020](KDAT-020.md) — Suggested queries panel (delivery commit exists; no regression lock)
+
+### Underdocumented — Needs review (1)
+- [KDAT-046](KDAT-046.md) — Run ID tagging and ephemeral write purge (working tree; delivery commit pending)
 
 ### Doc-only
 - [KDAT-007](KDAT-007.md) — Supervisor workflow (doc-only reference)
@@ -111,5 +123,5 @@ KDAT-009 through KDAT-010) have curated summaries but no branch delivery
 commits in the current log. KDAT-033 is a gap in the sequence with no
 evidence. Evidence class is the definitive signal.
 
-Ledger currently covers KDAT-001A through KDAT-037. Publication readiness
+Ledger currently covers KDAT-001A through KDAT-047. Publication readiness
 varies by milestone; see individual pages.

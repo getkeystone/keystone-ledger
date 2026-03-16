@@ -89,16 +89,27 @@ pages as if they were independently proven milestones.
 | 2026-03-14 | KDAT-035 | Bundle config + trust bootstrap |
 | 2026-03-14 | KDAT-036 | Scheduled cross-host restore drill |
 | 2026-03-15 | KDAT-037 | Audit verifier: redact env var names |
+| 2026-03-15 | KDAT-038 | Non-overlap locks for scheduled maintenance jobs |
+| 2026-03-15 | KDAT-039 | Standardise timer env loading + preflight + verify harness |
+| 2026-03-15 | KDAT-040 | Repo cleanliness guard for destructive ops |
+| 2026-03-15 | KDAT-041 | Maintenance window skip + timer jitter |
+| 2026-03-15 | KDAT-042 | Ops status snapshot (text + JSON) |
+| 2026-03-15 | KDAT-043 | Ops baseline and drift detection |
+| 2026-03-16 | KDAT-044 | CF supervisor workflow proof (case pack + offline verify) |
+| 2026-03-16 | KDAT-045 | Cloudflared JWT helper + guarded CF workflow gate |
+| 2026-03-16 | KDAT-046 | Run ID tagging + ephemeral write purge *(working tree; delivery commit pending)* |
+| 2026-03-16 | KDAT-047 | DB schema contract check for run_id |
 
 ---
 
 ## Evidence log metadata
 
 - Branch: lrfd-backend-bootstrap
-- Log generated: 2026-03-14T13:27:36Z (initial); extended 2026-03-14 for KDAT-022–026; extended 2026-03-14 for KDAT-027; extended 2026-03-15 for KDAT-028–037
-- keystone-gov HEAD at KDAT-028–037 extension: `c0a9a27`
-- keystone-console HEAD at KDAT-028–037 extension: `3e4f589`
-- keystone-deploy HEAD at KDAT-028–037 extension: `94e71ec` (includes KDAT-028–037 deliveries)
+- Log generated: 2026-03-14T13:27:36Z (initial); extended 2026-03-14 for KDAT-022–026; extended 2026-03-14 for KDAT-027; extended 2026-03-15 for KDAT-028–037; extended 2026-03-16 for KDAT-038–047
+- keystone-gov HEAD at KDAT-038–047 extension: `c0a9a27`
+- keystone-console HEAD at KDAT-038–047 extension: `3e4f589`
+- keystone-deploy HEAD at KDAT-038–047 extension: `8bbb03f` (unpushed; includes KDAT-038–047 deliveries)
+- Prior HEAD SHAs (KDAT-028–037 extension): gov `c0a9a27`, console `3e4f589`, deploy `94e71ec`
 - Prior HEAD SHAs (KDAT-027 extension): gov `c0a9a27`, console `3e4f589`, deploy `36fe893`
 - Prior HEAD SHAs (KDAT-022–026 extension): gov `b4b34c8`, console `b254491`, deploy `3d27116`
 - Prior HEAD SHAs (initial log): gov `93aa470`, console `8f7abd5`, deploy `3dbaaa0`

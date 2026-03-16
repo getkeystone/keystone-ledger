@@ -184,3 +184,42 @@ Scheduled maintenance, resource monitoring, and alerting.
 |-----------|---------|---------------|
 | [KDAT-028](../milestones/KDAT-028.md) | Scheduled DB hygiene | Proven on current branch |
 | [KDAT-029](../milestones/KDAT-029.md) | Resource sentinel timer | Proven on current branch |
+| [KDAT-042](../milestones/KDAT-042.md) | Ops status snapshot (text + JSON) | Proven on current branch |
+| [KDAT-043](../milestones/KDAT-043.md) | Ops baseline and drift detection | Proven on current branch |
+
+---
+
+## Scheduled job safety and hardening
+
+Non-overlap locks, env standardisation, repo guards, and maintenance windows for periodic jobs.
+
+| Milestone | Summary | Evidence class |
+|-----------|---------|---------------|
+| [KDAT-038](../milestones/KDAT-038.md) | Non-overlap locks for scheduled maintenance jobs | Proven on current branch |
+| [KDAT-039](../milestones/KDAT-039.md) | Standardise timer env loading + preflight + verify harness | Proven on current branch |
+| [KDAT-040](../milestones/KDAT-040.md) | Repo cleanliness guard for destructive ops | Proven on current branch |
+| [KDAT-041](../milestones/KDAT-041.md) | Maintenance window skip + timer jitter | Proven on current branch |
+
+---
+
+## Cloudflare Access integration
+
+CF Access JWT acquisition, guarded CF workflow smoke, and supervisor workflow proof.
+
+| Milestone | Summary | Evidence class |
+|-----------|---------|---------------|
+| [KDAT-025](../milestones/KDAT-025.md) | Cloudflare Access smoke proof | Proven on current branch |
+| [KDAT-027](../milestones/KDAT-027.md) | External CF smoke timer | Proven on current branch |
+| [KDAT-044](../milestones/KDAT-044.md) | CF supervisor workflow proof (case pack + offline verify) | Proven on current branch |
+| [KDAT-045](../milestones/KDAT-045.md) | Cloudflared JWT helper + guarded CF workflow gate | Proven on current branch |
+
+---
+
+## Database schema integrity
+
+Run ID schema contract, ephemeral write tagging, and purge.
+
+| Milestone | Summary | Evidence class |
+|-----------|---------|---------------|
+| [KDAT-046](../milestones/KDAT-046.md) | Run ID tagging + ephemeral write purge | Underdocumented |
+| [KDAT-047](../milestones/KDAT-047.md) | DB schema contract check for run_id | Proven on current branch |
