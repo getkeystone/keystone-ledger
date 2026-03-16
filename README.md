@@ -1,15 +1,9 @@
 # Keystone AI — KDAT Milestone Ledger
 
-Keystone AI builds governed AI retrieval and decision-support systems for
-first-responder and operational contexts. KDAT milestones are numbered
-capability deliverables. This repo is the public record: what was built,
-what test evidence backs each claim, and what each milestone explicitly does
-not prove. Every page carries an evidence class and a publication status.
+Keystone AI is a controlled procedure retrieval system for industrial safety and regulated operations. KDAT milestones are numbered capability deliverables. This repo is the public record: what was built,what test evidence backs each claim, and what each milestone explicitly does not prove. Every page carries an evidence class and a publication status.
 Read those first. This is an evidence ledger, not a brochure.
 
-The ledger tracks milestones through KDAT-051. 42 milestones are currently
-ready to publish. 41 have delivery commits on the tracked branch. 8 are
-curated summaries awaiting validation.
+The ledger tracks milestones through KDAT-051. 42 milestones are currently ready to publish. 41 have delivery commits on the tracked branch. 8 are curated summaries awaiting validation.
 
 ---
 
@@ -24,8 +18,7 @@ A KDAT is a numbered Keystone milestone with explicit scope, verification, evide
 KDAT milestones are numbered capability milestones in the Keystone AI development program. Each milestone defines a discrete technical capability that can be demonstrated and verified. Milestones are numbered sequentially (KDAT-001A, KDAT-002, KDAT-003, …) and may have sub-milestones (011A, 011B,
 011C).
 
-The KDAT program covers a governed AI retrieval and decision-support system
-for first-responder and operational contexts.
+Keystone AI is a controlled procedure retrieval system for industrial safety and regulated operations.
 
 ---
 
@@ -40,8 +33,7 @@ Each milestone has a page in [milestones/](milestones/). Every page has:
 - **Public-safe claims** — language safe to use externally
 - **Verification** — tests and smoke locks cited
 
-Before citing any milestone, read the full page. Pay particular attention to
-the evidence class and the "does NOT prove" section.
+Before citing any milestone, read the full page. Pay particular attention to the evidence class and the "does NOT prove" section.
 
 ---
 
