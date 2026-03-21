@@ -73,7 +73,9 @@ When evidence quality is weaker, the page says so.
 
 ## Current snapshot
 
-Generated from branch `lrfd-backend-bootstrap` (2026-03-16).
+### LRFD Pilot (feature/pilot-enhancements)
+
+Generated from branch `feature/pilot-enhancements` (2026-03-18).
 
 | Category | Count |
 |----------|-------|
@@ -82,16 +84,32 @@ Generated from branch `lrfd-backend-bootstrap` (2026-03-16).
 | Curated summary | 8 |
 | Doc-only reference | 1 |
 | Unknown (gap) | 1 |
-| **Ready to publish** | **42** |
 
-Ready to publish = 40 proven-on-branch milestones + 2 historical baselines.
-KDAT-020 (proven on branch) carries "Needs review" status: no smoke regression lock.
-KDAT-033 is an unassigned gap in the sequence.
+### Alberta Demo (dev/keystone-next)
+
+Generated from branch `dev/keystone-next` (2026-03-21).
+
+| KDAT | Title | Status |
+|------|-------|--------|
+| KDAT-070 | Config-Driven Deployment Architecture | Proven |
+| KDAT-071 | Generic Procedural Reranker | Proven |
+| KDAT-072 | Alberta OHS Corpus Ingestion (57 docs, 2,717 chunks) | Proven |
+| KDAT-073 | Public Demo Deployment (demo.getkeystone.ai) | Proven |
+| KDAT-074 | Professional UI Theme | Proven |
+| KDAT-075 | Security Hardening Pass 1 (7 critical/high fixes) | Proven |
+| KDAT-076 | Prompt Injection Mitigation (10/10 blocked) | Proven |
+| KDAT-077 | Retrieval Quality Eval Harness (19/20, 95%) | Proven |
+| KDAT-078 | Hybrid Weight Optimization | Proven |
+| KDAT-079 | Backup and Restore (scripts exist, no drill) | Proven (partial) |
+| KDAT-080 | Ingest Metadata Preservation | Proven |
+
+Live demo: [demo.getkeystone.ai](https://demo.getkeystone.ai)
 
 Branch HEAD SHAs at generation time:
 - keystone-gov: `c0a9a27`
 - keystone-console: `3e4f589`
 - keystone-deploy: `bcf7a9f` (includes KDAT-038–051)
+- dev/keystone-next: `2fab85a5898def8eab55ab5b100f209b30657b1d`
 
 ---
 
