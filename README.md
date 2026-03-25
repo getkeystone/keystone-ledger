@@ -108,6 +108,8 @@ Generated from branch `dev/keystone-next` (2026-03-21).
 | KDAT-084 | Security Pass 2 (6 items) | Proven |
 | KDAT-085 | Dev Stack Embedding Backfill (12,548 chunks, 280s) | Proven |
 | KDAT-086 | HHEM-2.1-Open Factual Consistency Scoring | Proven |
+| KDAT-088 | Demo Help Overlay ("How this works") | Proven |
+| KDAT-089 | First-Visit Onboarding Tour (guidance callouts) | Proven |
 
 Live demo: [demo.getkeystone.ai](https://demo.getkeystone.ai)
 
