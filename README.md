@@ -98,10 +98,16 @@ Generated from branch `dev/keystone-next` (2026-03-21).
 | KDAT-074 | Professional UI Theme | Proven |
 | KDAT-075 | Security Hardening Pass 1 (7 critical/high fixes) | Proven |
 | KDAT-076 | Prompt Injection Mitigation (10/10 blocked) | Proven |
-| KDAT-077 | Retrieval Quality Eval Harness (19/20, 95%) | Proven |
+| KDAT-077 | Retrieval Quality Eval (13/18, 72% -- safety perfect, over-refusing) | Proven |
 | KDAT-078 | Hybrid Weight Optimization | Proven |
 | KDAT-079 | Backup and Restore (scripts exist, no drill) | Proven (partial) |
 | KDAT-080 | Ingest Metadata Preservation | Proven |
+| KDAT-081 | Repo Separation (keystone-lrfd + keystone-demo) | Proven |
+| KDAT-082 | LRFD Roster Seeding (29 firefighters) | Proven |
+| KDAT-083 | Cross-Contamination Fix | Proven |
+| KDAT-084 | Security Pass 2 (6 items) | Proven |
+| KDAT-085 | Dev Stack Embedding Backfill (12,548 chunks, 280s) | Proven |
+| KDAT-086 | HHEM-2.1-Open Factual Consistency Scoring | Proven |
 
 Live demo: [demo.getkeystone.ai](https://demo.getkeystone.ai)
 
