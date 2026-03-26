@@ -133,3 +133,9 @@ Branch HEAD SHAs at generation time:
 - [Timeline](index/timeline.md)
 - [Publication policy](docs/publication-policy.md)
 - [Evidence class definitions](docs/evidence-classes.md)
+| KDAT-090 | Phase B: Feedback Signal API (POST/GET /feedback) | Proven |
+| KDAT-091 | Phase B: Feedback Capture UI (thumbs up/down) | Proven |
+| KDAT-092 | Jurisdiction Guard (non-Alberta refusal) | Proven |
+| KDAT-093 | LLM Prompt Tune (source-type recognition) | Proven |
+| KDAT-094 | Title-Match Reranker Boost | Proven |
+| KDAT-095 | Hedge-to-Deterministic Fallback with Relevance Guard | Proven |
