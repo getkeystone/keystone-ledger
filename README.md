@@ -110,6 +110,7 @@ Generated from branch `dev/keystone-next` (2026-03-21).
 | KDAT-086 | HHEM-2.1-Open Factual Consistency Scoring | Proven |
 | KDAT-088 | Demo Help Overlay ("How this works") | Proven |
 | KDAT-089 | First-Visit Onboarding Tour (guidance callouts) | Proven |
+| KDAT-087 | HHEM Threshold Calibration by Answer Source | Proven |
 
 Live demo: [demo.getkeystone.ai](https://demo.getkeystone.ai)
 
