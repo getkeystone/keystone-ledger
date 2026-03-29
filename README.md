@@ -3,7 +3,7 @@
 Keystone AI is a controlled procedure retrieval system for industrial safety and regulated operations. KDAT milestones are numbered capability deliverables. This repo is the public record: what was built,what test evidence backs each claim, and what each milestone explicitly does not prove. Every page carries an evidence class and a publication status.
 Read those first. This is an evidence ledger, not a brochure.
 
-The ledger tracks milestones through KDAT-051. 42 milestones are currently ready to publish. 41 have delivery commits on the tracked branch. 8 are curated summaries awaiting validation.
+The ledger tracks milestones through KDAT-101. 70 milestones are currently ready to publish. 70 have delivery commits on the tracked branch. 6 are curated summaries awaiting validation.
 
 ---
 
