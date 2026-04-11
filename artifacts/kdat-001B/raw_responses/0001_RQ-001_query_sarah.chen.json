@@ -1,0 +1,47 @@
+{
+  "query_id": "95c7b351-fd6f-4164-958d-d75e967e8495",
+  "citations": [
+    {
+      "chunkIndex": 22,
+      "page": 13,
+      "snippet": "O I L   S A N D S \nStandard\nDepartment:\nENVIRONMENT HEALTH AND SAFETY\nNumber:   \nLMS0037A\nSubject:\nCONFINED SPACE ENTRY\nReference:\nDocument will be replaced by RHS00012\nFort Hills & Insitu - Effective June 1, 2019 \nBase Plant \u2013 TBD\n            Date:  2012/02/07 Rev  003 Page  13  of   29\nAPPENDIX II",
+      "document_id": "confined-space-entry-lms0037a-en.pdf"
+    },
+    {
+      "chunkIndex": 17,
+      "page": 10,
+      "snippet": "ed spaces are similar and have similar hazards, but a specific \nseparate permit must be issued for each confined space entry. An \nexample of an entry permit is shown in Appendix 3.  \n \nThe entry permit must contain at a minimum \n\u0083 a list naming each worker who ente rs the confined space and the \nrea",
+      "document_id": "whs-pub-cs001.pdf"
+    },
+    {
+      "chunkIndex": 41,
+      "page": 26,
+      "snippet": "on cards left by entrants.\n\u2022 Ensure only authorized entrants are allowed to enter the confined space.\n\u2022 Initiate evacuation if necessary and ensure the \u201cDO NOT ENTER\u201d sign is\nposted at the entrance to the confined space.\n\u2022 Ensure entry related documentation is controlled and adequately protected fro",
+      "document_id": "confined-space-entry-lms0037a-en.pdf"
+    },
+    {
+      "chunkIndex": 39,
+      "page": 28,
+      "snippet": " if the situation is particularly complex. \n \n\u2022 A written confined space entry program should identify who has responsibilities for \nconfined space entry and a general description of how confined spaces are dealt \nwith in your workplace. \n \n\u2022 The program should also identify who must be trained, the",
+      "document_id": "Confined-Space-AB-V-2.0-Student-Manual.pdf"
+    },
+    {
+      "chunkIndex": 22,
+      "page": 8,
+      "snippet": " permit, compliant with th e requirements of this  COP, is required for all confined space entries within \nthe scope of this COP. The permit shall be prepared by a competent worker who is experienced in the \nwork to be completed and is familiar with the hazards of the confined space. All U of C empl",
+      "document_id": "UofC Confined Space Code of Practice.pdf"
+    }
+  ],
+  "evidence_sufficient": true,
+  "answer": "O I L S A N D S Standard Department: Number: Subject: Reference: Document will be replaced by RHS00012 Fort Hills & Insitu - Effective June 1, 2019 Base Plant \u2013 TBD 1. Personnel will not enter a confined space without a valid entry permit. 2.",
+  "receipt_id": "receipt-95c7b351",
+  "_meta": {
+    "test_id": "RQ-001",
+    "user_id": "sarah.chen",
+    "query_text": "What are the steps for confined space entry?",
+    "status_code": 200,
+    "elapsed_seconds": 1.489,
+    "timestamp": "2026-04-11T17:49:33.809207+00:00",
+    "url": "http://127.0.0.1:8002/query"
+  }
+}

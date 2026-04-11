@@ -1,0 +1,16 @@
+{
+  "query_id": "df5d8703-87a8-4914-a6a5-3929fa1960d3",
+  "citations": [],
+  "evidence_sufficient": false,
+  "answer": null,
+  "receipt_id": "receipt-df5d8703",
+  "_meta": {
+    "test_id": "FC-003",
+    "user_id": "sarah.chen",
+    "query_text": "How do I reset my Active Directory password?",
+    "status_code": 200,
+    "elapsed_seconds": 0.654,
+    "timestamp": "2026-04-11T17:49:46.111068+00:00",
+    "url": "http://127.0.0.1:8002/query"
+  }
+}

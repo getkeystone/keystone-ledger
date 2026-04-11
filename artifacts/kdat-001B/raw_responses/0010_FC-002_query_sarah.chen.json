@@ -1,0 +1,16 @@
+{
+  "query_id": "2529e991-3cdf-43cd-8d0e-3ffa4ff5c8f4",
+  "citations": [],
+  "evidence_sufficient": false,
+  "answer": null,
+  "receipt_id": "receipt-2529e991",
+  "_meta": {
+    "test_id": "FC-002",
+    "user_id": "sarah.chen",
+    "query_text": "What is the company vacation policy?",
+    "status_code": 200,
+    "elapsed_seconds": 0.539,
+    "timestamp": "2026-04-11T17:49:45.453533+00:00",
+    "url": "http://127.0.0.1:8002/query"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "query_id": "75bca4f3-c071-4eef-a13e-9438f1a824ca",
+  "citations": [
+    {
+      "chunkIndex": 10,
+      "page": 8,
+      "snippet": "5\nGuide to OHS: Workers\nOHS officers \nAlberta OHS officers have authority to:\n\u2022 Conduct work site inspections.\n\u2022 Investigate workplace injuries, illnesses or incidents. \n\u2022 Require proof of identity from any person at a work site.\n\u2022 Require employers to identify all workers and supervisors \nthey empl",
+      "document_id": "jend-ohsorp-li008-guide-to-ohs-workers-2024-10.pdf"
+    },
+    {
+      "chunkIndex": 11,
+      "page": 8,
+      "snippet": "5\nGuide to OHS: Employers\n\u2022 Require employers to identify all workers and supervisors \nthey employ. \n\u2022 Take a range of actions to enforce compliance with \noccupational health and safety laws.\nSection 37 of the OHS Act prohibits anyone from interfering with or \nhindering an OHS officer.\nRead more in ",
+      "document_id": "jet-ohsorp-li009-guide-to-ohs-employers-2024-10.pdf"
+    },
+    {
+      "chunkIndex": 4,
+      "page": 4,
+      "snippet": "CS001 \u2014 Confined Space 4 \nRevised \u2013 June 2009 \n \nWhat is a \u201cCode of Practice\u201d \n \nA code of practice is a document that  describes the procedures to be \nfollowed to ensure that workers safely perform work in a confined \nspace.  Section 33 of the OHS Act  requires a code of practice to \ninclude \u201cpract",
+      "document_id": "whs-pub-cs001.pdf"
+    },
+    {
+      "chunkIndex": 18,
+      "page": 13,
+      "snippet": "10\nGuide to OHS: Employers\nWorkers also have duties under the OHS Act and OHS Code. Their \ngeneral obligations in the OHS Act are:  \n\u2022 Taking reasonable care to ensure their own and others\u2019 \nhealth and safety while working.\n\u2022 Cooperating with you (their employer), their supervisor, or any \nother per",
+      "document_id": "jet-ohsorp-li009-guide-to-ohs-employers-2024-10.pdf"
+    },
+    {
+      "chunkIndex": 112,
+      "page": 82,
+      "snippet": ", or by workers not trained \nin Confined Space Entry requirements.",
+      "document_id": "Confined-Space-AB-V-2.0-Student-Manual.pdf"
+    }
+  ],
+  "evidence_sufficient": true,
+  "answer": "Guide to OHS: Workers OHS officers Alberta OHS officers have authority to: \u2022 Conduct work site inspections. \u2022 Investigate workplace injuries, illnesses or incidents. \u2022 Require proof of identity from any person at a work site. \u2022 Require employers to identify all workers and supervisors they employ. \u2022 Take a range of actions to enforce compliance with occupational health and safety laws. When performing a work site inspection or investigation, OHS officers have a number of authorities.",
+  "receipt_id": "receipt-75bca4f3",
+  "_meta": {
+    "test_id": "RQ-003",
+    "user_id": "sarah.chen",
+    "query_text": "What does COR Element 5 require for work procedures?",
+    "status_code": 200,
+    "elapsed_seconds": 1.257,
+    "timestamp": "2026-04-11T17:49:37.284997+00:00",
+    "url": "http://127.0.0.1:8002/query"
+  }
+}

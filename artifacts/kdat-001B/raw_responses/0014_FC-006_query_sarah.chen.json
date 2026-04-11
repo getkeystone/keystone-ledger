@@ -1,0 +1,16 @@
+{
+  "query_id": "7422f39f-8411-435b-8cb5-15bd82e9a9ee",
+  "citations": [],
+  "evidence_sufficient": false,
+  "answer": null,
+  "receipt_id": "receipt-7422f39f",
+  "_meta": {
+    "test_id": "FC-006",
+    "user_id": "sarah.chen",
+    "query_text": "What is the maintenance schedule for the Caterpillar 390F excavator?",
+    "status_code": 200,
+    "elapsed_seconds": 1.394,
+    "timestamp": "2026-04-11T17:49:49.837255+00:00",
+    "url": "http://127.0.0.1:8002/query"
+  }
+}

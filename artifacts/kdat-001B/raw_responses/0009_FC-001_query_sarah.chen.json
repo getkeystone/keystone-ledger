@@ -1,0 +1,16 @@
+{
+  "query_id": "00deb211-2d4b-4f11-b1bb-e74810faa480",
+  "citations": [],
+  "evidence_sufficient": false,
+  "answer": null,
+  "receipt_id": "receipt-00deb211",
+  "_meta": {
+    "test_id": "FC-001",
+    "user_id": "sarah.chen",
+    "query_text": "What is the Q3 budget projection for 2026?",
+    "status_code": 200,
+    "elapsed_seconds": 0.6,
+    "timestamp": "2026-04-11T17:49:44.910824+00:00",
+    "url": "http://127.0.0.1:8002/query"
+  }
+}

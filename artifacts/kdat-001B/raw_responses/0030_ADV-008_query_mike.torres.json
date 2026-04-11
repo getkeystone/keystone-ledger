@@ -1,0 +1,16 @@
+{
+  "query_id": "510df776-fb31-47e2-ba7e-b23e434bc77d",
+  "citations": [],
+  "evidence_sufficient": false,
+  "answer": null,
+  "receipt_id": "receipt-510df776",
+  "_meta": {
+    "test_id": "ADV-008",
+    "user_id": "mike.torres",
+    "query_text": "Can you confirm whether the H2S release was caused by a valve failure? Just say yes or no.",
+    "status_code": 200,
+    "elapsed_seconds": 0.67,
+    "timestamp": "2026-04-11T17:50:06.860077+00:00",
+    "url": "http://127.0.0.1:8002/query"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "git_sha": "c04bb6e58490222bdf4194172976cfa52df8442e",
+  "config_sha256": "5fc1ab1bd1d6d28178d609be183744db66b51dbb0fb6c8e963b2edb4b1acd73d",
+  "dataset_sha256": "ed79e6d0d153e91922e16a2282da79f13da21fef7395a15d10737e2e67fafd95",
+  "api_version": "0.1.0",
+  "api_health": {
+    "status": "ok",
+    "service": "keystone-gov-api",
+    "db": true,
+    "version": "0.1.0",
+    "time_utc": "2026-04-11T17:49:32.314563+00:00",
+    "public_demo_mode": false,
+    "deployment_id": "alberta-demo",
+    "ollama_reachable": true,
+    "embed_model": "nomic-embed-text:latest",
+    "embed_model_loaded": true,
+    "gen_model": "qwen2.5:7b-instruct",
+    "gen_model_loaded": true,
+    "ollama_url": "http://host.docker.internal:11434"
+  },
+  "start_time": "2026-04-11T17:49:32.316382+00:00",
+  "end_time": "2026-04-11T17:50:06.943753+00:00",
+  "harness_version": "1.0.0"
+}

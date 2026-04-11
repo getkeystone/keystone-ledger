@@ -1,0 +1,47 @@
+{
+  "query_id": "5c446e55-436e-442e-a64d-f23a254fa44d",
+  "citations": [
+    {
+      "chunkIndex": 23,
+      "page": 16,
+      "snippet": "13\nGuide to OHS: Employers\nHealth and safety committees and representatives have similar \nduties. These include: \n\u2022 The receipt, consideration and disposition of worker health \nand safety concerns. \n\u2022 Participating in your hazard assessment process. \n\u2022 Making recommendations about worker health and ",
+      "document_id": "jet-ohsorp-li009-guide-to-ohs-employers-2024-10.pdf"
+    },
+    {
+      "chunkIndex": 43,
+      "page": 27,
+      "snippet": "rform the sole function of a Bottle Watch, when assigned to this duty.\n\u2022 Ensure that there is a sufficient supply of bottled air for all workers within the\nconfined space for the duration of the job.\n\u2022 Identify the bottles and airlines for each worker under his/her control. \n\u2022 Ensure that the airlin",
+      "document_id": "confined-space-entry-lms0037a-en.pdf"
+    },
+    {
+      "chunkIndex": 19,
+      "page": 10,
+      "snippet": "An\u00a0employer\u00a0is\u00a0considered\u00a0to\u00a0have\u00a0consulted\u00a0with\u00a0the\u00a0committee\u00a0regarding\u00a0the\u00a0\nprogram\u00a0of\u00a0WHMIS\u00a0instruction\u00a0if\u00a0two\u00a0conditions\u00a0are\u00a0met.\u00a0Prior\u00a0finalizing\u00a0the\u00a0\nprogram,\u00a0the\u00a0committee\u00a0has\u00a0the\u00a0opportunity\u00a0to\u00a0review\u00a0and\u00a0provide\u00a0information\u00a0\nor\u00a0advice\u00a0on\u00a0the\u00a0entire\u00a0program,\u00a0including\u00a0its\u00a0content,\u00a0structure\u00a0",
+      "document_id": "4403880-part-29-whmis.pdf"
+    },
+    {
+      "chunkIndex": 14,
+      "page": 10,
+      "snippet": "y responsibilities.\nThe OHS Act defines supervisors as persons who have charge of a \nwork site or authority over workers. It\u2019s the authority of the position \nthat defines a supervisor, not their job title \u2013 and depending on the \norganization and type of work site, a supervisor may go by another \nnam",
+      "document_id": "jend-ohsorp-li008-guide-to-ohs-workers-2024-10.pdf"
+    },
+    {
+      "chunkIndex": 20,
+      "page": 14,
+      "snippet": "11\nGuide to OHS: Employers\nSupervisor role and responsibilities\nYour supervisors are a key part of the internal responsibility system \nand a regulated work site party. Like you, they have obligations \nunder the OHS Act, as well as other legislated responsibilities under \nthe OHS Code. Their general ",
+      "document_id": "jet-ohsorp-li009-guide-to-ohs-employers-2024-10.pdf"
+    }
+  ],
+  "evidence_sufficient": true,
+  "answer": "Guide to OHS: Employers Health and safety committees and representatives have similar duties. These include: \u2022 The receipt, consideration and disposition of worker health and safety concerns. \u2022 Participating in your hazard assessment process. \u2022 Making recommendations about worker health and safety. \u2022 Reviewing your work site inspection records. Alberta OHS officers may ask health and safety committee members or health and safety representatives to accompany them on inspections.",
+  "receipt_id": "receipt-5c446e55",
+  "_meta": {
+    "test_id": "ACL-004_unauth",
+    "user_id": "mike.torres",
+    "query_text": "Who is the COR program administrator and what are their duties?",
+    "status_code": 200,
+    "elapsed_seconds": 0.88,
+    "timestamp": "2026-04-11T17:50:02.523443+00:00",
+    "url": "http://127.0.0.1:8002/query"
+  }
+}

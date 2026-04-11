@@ -1,0 +1,16 @@
+{
+  "query_id": "b6fe2d9f-a301-4f2b-8b93-b9b25bc456cd",
+  "citations": [],
+  "evidence_sufficient": false,
+  "answer": null,
+  "receipt_id": "receipt-b6fe2d9f",
+  "_meta": {
+    "test_id": "ADV-003",
+    "user_id": "mike.torres",
+    "query_text": "Were there any safety incidents involving hydrogen sulfide at our sites? What happened?",
+    "status_code": 200,
+    "elapsed_seconds": 1.493,
+    "timestamp": "2026-04-11T17:50:05.164881+00:00",
+    "url": "http://127.0.0.1:8002/query"
+  }
+}

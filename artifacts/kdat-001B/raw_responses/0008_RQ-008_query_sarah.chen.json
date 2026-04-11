@@ -1,0 +1,47 @@
+{
+  "query_id": "e58f74ef-e47c-4976-a5ea-b9256aec0a93",
+  "citations": [
+    {
+      "chunkIndex": 23,
+      "page": 16,
+      "snippet": "13\nGuide to OHS: Employers\nHealth and safety committees and representatives have similar \nduties. These include: \n\u2022 The receipt, consideration and disposition of worker health \nand safety concerns. \n\u2022 Participating in your hazard assessment process. \n\u2022 Making recommendations about worker health and ",
+      "document_id": "jet-ohsorp-li009-guide-to-ohs-employers-2024-10.pdf"
+    },
+    {
+      "chunkIndex": 21,
+      "page": 15,
+      "snippet": "12\nGuide to OHS: Employers\nHealth and safety committees, \nrepresentatives, and programs\nThreshold requirements \nEmployers with 20 or more regularly employed workers must \nestablish a health and safety committee and a health and safety \nprogram.\nIf you\u2019re an employer with five to 19 regularly employe",
+      "document_id": "jet-ohsorp-li009-guide-to-ohs-employers-2024-10.pdf"
+    },
+    {
+      "chunkIndex": 24,
+      "page": 17,
+      "snippet": "14\nGuide to OHS: Employers\nWhether or not you have a health and safety program, you \nmust meet a number of other legislated requirements that are \nfoundational to health and safety programs. These include, but are \nnot limited to, hazard assessment and control, incident reporting \nand investigating,",
+      "document_id": "jet-ohsorp-li009-guide-to-ohs-employers-2024-10.pdf"
+    },
+    {
+      "chunkIndex": 6,
+      "page": 5,
+      "snippet": "2\nGuide to OHS: Employers\nOur shared goal: health and safety\nThis guide introduces you to Alberta\u2019s occupational health and \nsafety laws and your role \u2013 as an employer \u2013 in ensuring health \nand safety at the work site.\nOccupational health and safety law is based on the internal \nresponsibility syste",
+      "document_id": "jet-ohsorp-li009-guide-to-ohs-employers-2024-10.pdf"
+    },
+    {
+      "chunkIndex": 32,
+      "page": 19,
+      "snippet": "Occupational Health and Safety Code 2009  Part 2 \nExplanation Guide \n \n \n  2-19 \u00a0\nSubsection 10(2)  Emergency response \n\u00a0\nThis\u00a0 subsection\u00a0 reflects\u00a0 the\u00a0 practical\u00a0 reality\u00a0 that\u00a0 during\u00a0 an\u00a0 emergency\u00a0 response,\u00a0 it\u00a0 is\u00a0\nimpractical\u00a0(and\u00a0may\u00a0be\u00a0impossible)\u00a0to\u00a0prepare\u00a0a\u00a0written\u00a0hazard\u00a0assessment\u00a0re",
+      "document_id": "4403880-part-2-hazard-assessment-elimination-and-control.pdf"
+    }
+  ],
+  "evidence_sufficient": true,
+  "answer": "Guide to OHS: Employers Health and safety committees and representatives have similar duties. These include: \u2022 The receipt, consideration and disposition of worker health and safety concerns. \u2022 Participating in your hazard assessment process. \u2022 Making recommendations about worker health and safety. \u2022 Reviewing your work site inspection records. Alberta OHS officers may ask health and safety committee members or health and safety representatives to accompany them on inspections.",
+  "receipt_id": "receipt-e58f74ef",
+  "_meta": {
+    "test_id": "RQ-008",
+    "user_id": "sarah.chen",
+    "query_text": "Who is responsible for maintaining the COR safety program?",
+    "status_code": 200,
+    "elapsed_seconds": 1.522,
+    "timestamp": "2026-04-11T17:49:44.306850+00:00",
+    "url": "http://127.0.0.1:8002/query"
+  }
+}

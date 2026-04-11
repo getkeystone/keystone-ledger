@@ -1,0 +1,47 @@
+{
+  "query_id": "e7540d50-18c2-41c8-ad51-f38dfe088fab",
+  "citations": [
+    {
+      "chunkIndex": 22,
+      "page": 8,
+      "snippet": " permit, compliant with th e requirements of this  COP, is required for all confined space entries within \nthe scope of this COP. The permit shall be prepared by a competent worker who is experienced in the \nwork to be completed and is familiar with the hazards of the confined space. All U of C empl",
+      "document_id": "UofC Confined Space Code of Practice.pdf"
+    },
+    {
+      "chunkIndex": 11,
+      "page": 4,
+      "snippet": "ed or restricted \nspaces; \n\uf0b7 Must comply with the requirements of this COP; \n\uf0b7 Perform all entries in accordance with the CSE Permit for confined space entry, or in accordance \nwith the hazard assessment for restricted space entry; \n\uf0b7 Must follow U of C COP for all entries including third party cont",
+      "document_id": "UofC Confined Space Code of Practice.pdf"
+    },
+    {
+      "chunkIndex": 22,
+      "page": 13,
+      "snippet": "O I L   S A N D S \nStandard\nDepartment:\nENVIRONMENT HEALTH AND SAFETY\nNumber:   \nLMS0037A\nSubject:\nCONFINED SPACE ENTRY\nReference:\nDocument will be replaced by RHS00012\nFort Hills & Insitu - Effective June 1, 2019 \nBase Plant \u2013 TBD\n            Date:  2012/02/07 Rev  003 Page  13  of   29\nAPPENDIX II",
+      "document_id": "confined-space-entry-lms0037a-en.pdf"
+    },
+    {
+      "chunkIndex": 52,
+      "page": 19,
+      "snippet": "designated University of Calgary Manager or Supervisor or Environmental, Health, a nd Safety \n(EH&S): \n \nAll actions and/or conditions for safe entry have been identified.  I have verified the conditions as set forth on this permit to be correct and \nauthorize the work to commence. \n \n       \nDepart",
+      "document_id": "UofC Confined Space Code of Practice.pdf"
+    },
+    {
+      "chunkIndex": 23,
+      "page": 12,
+      "snippet": "Occupational Health and Safety Code 2009   Part 5 \nExplanation Guide \n \nThe\u00a0entry\u00a0permit\u00a0must,\u00a0at\u00a0a\u00a0minimum\u00a0\n(a) list\u00a0the\u00a0name\u00a0of\u00a0each\u00a0worker\u00a0who\u00a0enters\u00a0the\u00a0confined\u00a0space\u00a0and\u00a0the\u00a0reason\u00a0for\u00a0\ntheir\u00a0entry,\u00a0\n(b) provide\u00a0the\u00a0location\u00a0of\u00a0the\u00a0confined\u00a0space,\u00a0\n(c) specify\u00a0the\u00a0time\u00a0period\u00a0for\u00a0which\u00a0the\u00a0ent",
+      "document_id": "4403880-part-5-confined-spaces.pdf"
+    }
+  ],
+  "evidence_sufficient": true,
+  "answer": "permit, compliant with th e requirements of this COP, is required for all confined space entries within the scope of this COP. The permit shall be prepared by a competent worker who is experienced in the work to be completed and is familiar with the hazards of the confined space. All U of C employees will use the U of C Confined Space Entry Permit in Appendix A.",
+  "receipt_id": "receipt-e7540d50",
+  "_meta": {
+    "test_id": "RQ-002",
+    "user_id": "sarah.chen",
+    "query_text": "What permits are required for confined space work and who signs them?",
+    "status_code": 200,
+    "elapsed_seconds": 2.21,
+    "timestamp": "2026-04-11T17:49:36.023748+00:00",
+    "url": "http://127.0.0.1:8002/query"
+  }
+}

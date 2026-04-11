@@ -1,0 +1,47 @@
+{
+  "query_id": "6fad0bd8-10b5-46f9-bf7a-a3c403dcb421",
+  "citations": [
+    {
+      "chunkIndex": 240,
+      "page": 124,
+      "snippet": "Occupational Health and Safety Code 2009  Part 36 \nExplanation Guide \n \n \n  36 - 124 \nSubsections 730(5)  \n\u00a0\nThe\u00a0requirement\u00a0for\u00a0countersigning\u00a0reports\u00a0by\u00a0the\u00a0person\u00a0in\u00a0charge\u00a0verifies\u00a0the\u00a0\nveracity\u00a0of\u00a0the\u00a0report\u00a0and\u00a0signifies\u00a0that\u00a0the\u00a0report\u00a0has\u00a0been\u00a0completed.\u00a0\u00a0\n\u00a0\n\u00a0\nSection 731   Flammable gas lev",
+      "document_id": "4403880-part-36-mining.pdf"
+    },
+    {
+      "chunkIndex": 244,
+      "page": 126,
+      "snippet": "Occupational Health and Safety Code 2009  Part 36 \nExplanation Guide \n \n \n  36 - 126 \nSubsection 732(5) \n\u00a0\nIf\u00a0the\u00a0percentage\u00a0of\u00a0flammable\u00a0gas\u00a0continues\u00a0to\u00a0exceed\u00a015\u00a0percent\u00a0of\u00a0the\u00a0LEL\u00a0a\u00a0\ncontinuous\u00a0 methane\u00a0 monitoring\u00a0 system\u00a0 must\u00a0 be\u00a0 installed.\u00a0 The\u00a0 continuous\u00a0\nmonitoring\u00a0system\u00a0must\u00a0then\u00a0remai",
+      "document_id": "4403880-part-36-mining.pdf"
+    },
+    {
+      "chunkIndex": 5,
+      "page": 4,
+      "snippet": "Occupational Health and Safety Code 2009  Part 10 \nExplanation Guide \n \nGeneral Protection and Prevention \nSection 162   Prohibitions \n\u00a0\nSubsections 162(1) and 162(2) \n\u00a0\nEmployers\u00a0must\u00a0ensure\u00a0that\u00a0flammable\u00a0and\u00a0combustible\u00a0substances\u00a0at\u00a0the\u00a0workplace\u00a0\ndo\u00a0not\u00a0ignite\u00a0and\u00a0harm\u00a0workers\u00a0or\u00a0damage\u00a0equipme",
+      "document_id": "4403880-part-10-fire-and-explosion-hazards.pdf"
+    },
+    {
+      "chunkIndex": 250,
+      "page": 129,
+      "snippet": "Occupational Health and Safety Code 2009  Part 36 \nExplanation Guide \n \n \n  36 - 129 \nSubsection 738(6) \n\u00a0\nSince\u00a0 the\u00a0 methane\u00a0 detector\u00a0 must\u00a0 be\u00a0 interconnected\u00a0 with\u00a0 the\u00a0 machine\u00a0 control\u00a0\nsystem,\u00a0a\u00a0methane\u00a0gas\u00a0excursion\u00a0will\u00a0trip\u00a0out\u00a0the\u00a0cutting\u00a0head.\u00a0Such\u00a0an\u00a0occurrence\u00a0\nwould\u00a0be\u00a0the\u00a0first\u00a0warn",
+      "document_id": "4403880-part-36-mining.pdf"
+    },
+    {
+      "chunkIndex": 252,
+      "page": 130,
+      "snippet": "Occupational Health and Safety Code 2009  Part 36 \nExplanation Guide \n \n \n  36 - 130 \nSection 740   Breakdown of detector  \n\u00a0\nSubsection 740(1) \n\u00a0\nThis\u00a0 subsection\u00a0 allows\u00a0 a\u00a0 coal\u00a0 cutting\u00a0 machine\u00a0 to\u00a0 continue\u00a0 to\u00a0 operate\u00a0 if\u00a0 its\u00a0\ncombustible\u00a0gas\u00a0detector\u00a0fails\u00a0to\u00a0operate.\u00a0This\u00a0exception\u00a0is\u00a0ava",
+      "document_id": "4403880-part-36-mining.pdf"
+    }
+  ],
+  "evidence_sufficient": true,
+  "answer": "Occupational Health and Safety Code 2009 Part 36 Explanation Guide Subsections 730(5) The\u00a0requirement\u00a0for\u00a0countersigning\u00a0reports\u00a0by\u00a0the\u00a0person\u00a0in\u00a0charge\u00a0verifies\u00a0the veracity\u00a0of\u00a0the\u00a0report\u00a0and\u00a0signifies\u00a0that\u00a0the\u00a0report\u00a0has\u00a0been\u00a0completed.",
+  "receipt_id": "receipt-6fad0bd8",
+  "_meta": {
+    "test_id": "FC-005",
+    "user_id": "sarah.chen",
+    "query_text": "What are our greenhouse gas reporting requirements under TIER?",
+    "status_code": 200,
+    "elapsed_seconds": 1.957,
+    "timestamp": "2026-04-11T17:49:48.439917+00:00",
+    "url": "http://127.0.0.1:8002/query"
+  }
+}

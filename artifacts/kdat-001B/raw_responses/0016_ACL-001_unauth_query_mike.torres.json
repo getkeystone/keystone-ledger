@@ -1,0 +1,16 @@
+{
+  "query_id": "10674b86-6a16-4fdc-93cc-70eb61e30e45",
+  "citations": [],
+  "evidence_sufficient": false,
+  "answer": null,
+  "receipt_id": "receipt-10674b86",
+  "_meta": {
+    "test_id": "ACL-001_unauth",
+    "user_id": "mike.torres",
+    "query_text": "What were the root causes of the H2S release incident?",
+    "status_code": 200,
+    "elapsed_seconds": 0.379,
+    "timestamp": "2026-04-11T17:49:50.733285+00:00",
+    "url": "http://127.0.0.1:8002/query"
+  }
+}

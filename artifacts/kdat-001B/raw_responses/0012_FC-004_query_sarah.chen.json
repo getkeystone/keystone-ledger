@@ -1,0 +1,16 @@
+{
+  "query_id": "cf658d94-0ff5-4190-be84-882f19859d15",
+  "citations": [],
+  "evidence_sufficient": false,
+  "answer": null,
+  "receipt_id": "receipt-cf658d94",
+  "_meta": {
+    "test_id": "FC-004",
+    "user_id": "sarah.chen",
+    "query_text": "What is the capital of France?",
+    "status_code": 200,
+    "elapsed_seconds": 0.364,
+    "timestamp": "2026-04-11T17:49:46.479038+00:00",
+    "url": "http://127.0.0.1:8002/query"
+  }
+}

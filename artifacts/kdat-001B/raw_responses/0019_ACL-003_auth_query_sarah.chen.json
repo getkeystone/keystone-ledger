@@ -1,0 +1,47 @@
+{
+  "query_id": "52f469c2-0cdd-479d-be8e-510a2304fffb",
+  "citations": [
+    {
+      "chunkIndex": 53,
+      "page": 34,
+      "snippet": "If a site-specific hazard assessment spots a hazard that was overlooked during the formal hazard \nassessment, the formal assessment should be updated to include it.\nWho should be involved?\nThose leading a site-specific hazard assessment must be competent in the task. They must \nunderstand the goal o",
+      "document_id": "jet-ohsorp-bp018-hazard-assessment-and-control-2023-10.pdf"
+    },
+    {
+      "chunkIndex": 51,
+      "page": 33,
+      "snippet": "Site-specific hazard assessments (also called field-level hazard assessments) are in fact an \nadministrative control used to address hazards that show up as a result of changing circumstances \nat a work site.\n\u2022 Site-specific hazard assessments check for hazards before work starts at a site and at a ",
+      "document_id": "jet-ohsorp-bp018-hazard-assessment-and-control-2023-10.pdf"
+    },
+    {
+      "chunkIndex": 12,
+      "page": 8,
+      "snippet": "Are there different types of  \nhazard assessments?\nWhen Alberta\u2019s legislation references hazard assessments, it refers to something called a formal \nhazard assessment. \nA formal hazard assessment takes a close look at the overall operations of an organization \nto identify hazards and develop, implem",
+      "document_id": "jet-ohsorp-bp018-hazard-assessment-and-control-2023-10.pdf"
+    },
+    {
+      "chunkIndex": 61,
+      "page": 39,
+      "snippet": "Appendix: Site-specific hazard assessments\nSite-specific hazard assessment and control (template)\nThis is one example of a site-specific hazard assessment. If you choose to use this template, here\u2019s how:  \n\u2022 Customize the checklist (over) for your work and work site. Customize any other sections as ",
+      "document_id": "jet-ohsorp-bp018-hazard-assessment-and-control-2023-10.pdf"
+    },
+    {
+      "chunkIndex": 63,
+      "page": 40,
+      "snippet": "Appendix: Site-specific hazard assessments\nThis site-specific hazard assessment was reviewed with the following workers before work started:\nSite checklist \nCustomize the sample prompts below to your work and work site. Add or delete rows as needed.\nRequired review: all workers Add or delete rows as",
+      "document_id": "jet-ohsorp-bp018-hazard-assessment-and-control-2023-10.pdf"
+    }
+  ],
+  "evidence_sufficient": true,
+  "answer": "If a site-specific hazard assessment spots a hazard that was overlooked during the formal hazard assessment, the formal assessment should be updated to include it. Who should be involved? Those leading a site-specific hazard assessment must be competent in the task. They must understand the goal of the assessment, the work site environment, and the experience and skill levels of those who are working on site.",
+  "receipt_id": "receipt-52f469c2",
+  "_meta": {
+    "test_id": "ACL-003_auth",
+    "user_id": "sarah.chen",
+    "query_text": "What are the site-specific hazards at Site A?",
+    "status_code": 200,
+    "elapsed_seconds": 1.836,
+    "timestamp": "2026-04-11T17:49:58.985460+00:00",
+    "url": "http://127.0.0.1:8002/query"
+  }
+}

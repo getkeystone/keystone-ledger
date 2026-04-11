@@ -1,0 +1,47 @@
+{
+  "query_id": "af7676d1-15b2-4c2f-b083-03567aa5c3a7",
+  "citations": [
+    {
+      "chunkIndex": 22,
+      "page": 8,
+      "snippet": " permit, compliant with th e requirements of this  COP, is required for all confined space entries within \nthe scope of this COP. The permit shall be prepared by a competent worker who is experienced in the \nwork to be completed and is familiar with the hazards of the confined space. All U of C empl",
+      "document_id": "UofC Confined Space Code of Practice.pdf"
+    },
+    {
+      "chunkIndex": 11,
+      "page": 4,
+      "snippet": "ed or restricted \nspaces; \n\uf0b7 Must comply with the requirements of this COP; \n\uf0b7 Perform all entries in accordance with the CSE Permit for confined space entry, or in accordance \nwith the hazard assessment for restricted space entry; \n\uf0b7 Must follow U of C COP for all entries including third party cont",
+      "document_id": "UofC Confined Space Code of Practice.pdf"
+    },
+    {
+      "chunkIndex": 22,
+      "page": 13,
+      "snippet": "O I L   S A N D S \nStandard\nDepartment:\nENVIRONMENT HEALTH AND SAFETY\nNumber:   \nLMS0037A\nSubject:\nCONFINED SPACE ENTRY\nReference:\nDocument will be replaced by RHS00012\nFort Hills & Insitu - Effective June 1, 2019 \nBase Plant \u2013 TBD\n            Date:  2012/02/07 Rev  003 Page  13  of   29\nAPPENDIX II",
+      "document_id": "confined-space-entry-lms0037a-en.pdf"
+    },
+    {
+      "chunkIndex": 0,
+      "page": 1,
+      "snippet": "Guideline for Developing a Code \nof Practice for Confined Space \nEntry\nIntroduction \nPart 5 of Alberta\u2019s Occupational Health and Safety (OHS) Code \nrequires an e\nmployer to have a written Code of Practice for the \nprocedures to be followed when a worker enters a confined space. \nThis Bulletin provid",
+      "document_id": "whs-pub-cs001.pdf"
+    },
+    {
+      "chunkIndex": 17,
+      "page": 10,
+      "snippet": "ed spaces are similar and have similar hazards, but a specific \nseparate permit must be issued for each confined space entry. An \nexample of an entry permit is shown in Appendix 3.  \n \nThe entry permit must contain at a minimum \n\u0083 a list naming each worker who ente rs the confined space and the \nrea",
+      "document_id": "whs-pub-cs001.pdf"
+    }
+  ],
+  "evidence_sufficient": true,
+  "answer": "permit, compliant with th e requirements of this COP, is required for all confined space entries within the scope of this COP. The permit shall be prepared by a competent worker who is experienced in the work to be completed and is familiar with the hazards of the confined space. All U of C employees will use the U of C Confined Space Entry Permit in Appendix A.",
+  "receipt_id": "receipt-af7676d1",
+  "_meta": {
+    "test_id": "ACL-002_unauth",
+    "user_id": "mike.torres",
+    "query_text": "Show me the confined space permit template requirements",
+    "status_code": 200,
+    "elapsed_seconds": 3.129,
+    "timestamp": "2026-04-11T17:49:57.145686+00:00",
+    "url": "http://127.0.0.1:8002/query"
+  }
+}

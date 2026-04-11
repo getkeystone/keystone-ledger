@@ -1,0 +1,47 @@
+{
+  "query_id": "3c6a2c37-2676-4907-90cf-efb2c2a9e891",
+  "citations": [
+    {
+      "chunkIndex": 11,
+      "page": 6,
+      "snippet": "Occupational Health and Safety Code 2009 Part 9 \nExplanation Guide \nSubsection 139(4) applies to permanent work areas in which the vertical \ndistance a worker can fall is more than 1.2 metres but less than 3 metres. This \nrequirement is intended to address fall safety at heights of less than 3 metre",
+      "document_id": "4403880-part-9-fall-protection.pdf"
+    },
+    {
+      "chunkIndex": 7,
+      "page": 4,
+      "snippet": "with the roof is not considered to be part of \nthe \u201cfall distance\u201d; \n(2) if the worker is within 2 metres of a gable end at any point upslope of the \neave, the fall distance is taken as the vertical distance from the worker\u2019s feet \nto a lower level. The assumption here is that the fall hazard is the",
+      "document_id": "4403880-part-9-fall-protection.pdf"
+    },
+    {
+      "chunkIndex": 9,
+      "page": 5,
+      "snippet": "Occupational Health and Safety Code 2009 Part 9 \nExplanation Guide \nGuardrails are listed as an example in subsection 139(3) because they are often \nthe preferred first choice for fall protection purposes. Guardrails become a \npermanent part of the installation, eliminating the need to equip workers",
+      "document_id": "4403880-part-9-fall-protection.pdf"
+    },
+    {
+      "chunkIndex": 113,
+      "page": 57,
+      "snippet": "Occupational Health and Safety Code 2009 Part 9 \nExplanation Guide \nWorkers engaged in these five types of activities at height are exposed to fall \nhazards for very short periods of time, if at all, since they may be able to \naccomplish their work without going near a danger zone i.e. within 2 metr",
+      "document_id": "4403880-part-9-fall-protection.pdf"
+    },
+    {
+      "chunkIndex": 0,
+      "page": 1,
+      "snippet": "Occupational Health and Safety Code 2009 Part 9 \nExplanation Guide \nPart 9 \nFall Protection \nHighlights \n\u2022 Section 138 allows rescue personnel involved in emergency rescue training \nor in providing emergency rescue services to use equipment and services \nother than those specified in this Part. \n\u2022 S",
+      "document_id": "4403880-part-9-fall-protection.pdf"
+    }
+  ],
+  "evidence_sufficient": true,
+  "answer": "Occupational Health and Safety Code 2009 Part 9 Explanation Guide Subsection 139(4) applies to permanent work areas in which the vertical distance a worker can fall is more than 1.2 metres but less than 3 metres. This requirement is intended to address fall safety at heights of less than 3 metres at permanent elevated work areas such as loading docks and mezzanines. While guardrails are the preferred method of preventing a worker fall, guardrails are not always practicable.",
+  "receipt_id": "receipt-3c6a2c37",
+  "_meta": {
+    "test_id": "RQ-006",
+    "user_id": "sarah.chen",
+    "query_text": "At what height is fall protection required?",
+    "status_code": 200,
+    "elapsed_seconds": 2.073,
+    "timestamp": "2026-04-11T17:49:41.182536+00:00",
+    "url": "http://127.0.0.1:8002/query"
+  }
+}
