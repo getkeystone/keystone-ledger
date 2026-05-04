@@ -14,6 +14,10 @@ Keystone AI is a governed knowledge retrieval system for regulated industries. T
 
 Corpus: 53 Alberta OHS safety documents, 2,674 chunks.
 
+## In development
+
+Governed agent extension (KDAT-002): tool authorization by role, action audit trails, HITL approval gates, multi-step reasoning with per-step evidence. Same governance primitives applied to tool-using agents.
+
 ## What is not claimed
 
 - Enterprise HA or disaster recovery
@@ -51,3 +55,5 @@ Milestones are numbered capability deliverables (KDAT-001 through KDAT-101). Eac
 |---|---|
 | Live demo | [demo.getkeystone.ai](https://demo.getkeystone.ai) |
 | Website | [getkeystone.ai](https://getkeystone.ai) |
+| Org profile | [github.com/getkeystone](https://github.com/getkeystone) |
+| Contact | [arnaldo@getkeystone.ai](mailto:arnaldo@getkeystone.ai) |
