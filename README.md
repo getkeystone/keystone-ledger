@@ -18,6 +18,11 @@ Corpus: 53 Alberta OHS safety documents, 2,674 chunks.
 
 Governed agent extension (KDAT-002): tool authorization by role, action audit trails, HITL approval gates, multi-step reasoning with per-step evidence. Same governance primitives applied to tool-using agents.
 
+## Related
+
+- [governed-incident-agent](https://github.com/arnaldosepulveda/governed-incident-agent) —
+  Hackathon demo applying KDAT-002 governance architecture to a CopilotKit generative UI. Per-action authorization, fail-closed refusal, audit trail rendered as interactive components.
+
 ## What is not claimed
 
 - Enterprise HA or disaster recovery
