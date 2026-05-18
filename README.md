@@ -1,6 +1,6 @@
-# Keystone Applied Intelligence — Evaluation Evidence
+# Keystone AI -- Evaluation Evidence
 
-Keystone Applied Intelligence is a governed knowledge retrieval system for regulated industries. This repo documents what has been built, what evidence backs each claim, and what each capability explicitly does not prove.
+Keystone AI is a governed knowledge retrieval system for regulated industries. This repo documents what has been built, what evidence backs each claim, and what each capability explicitly does not prove.
 
 ## Current evaluation baseline (KDAT-001B, 2026-04-11)
 
@@ -10,8 +10,7 @@ Keystone Applied Intelligence is a governed knowledge retrieval system for regul
 | Mean reciprocal rank (MRR) | 0.79 |
 | Adversarial ACL testing | 8/8 blocked, 0 leaks |
 | Audit chain integrity | Intact, immutable |
-
-| Fail-closed (out-of-scope) | 5/6 (83%) — FC-005 remediated 2026-05-17 |
+| Fail-closed (out-of-scope) | 5/6 (83%). FC-005 remediated 2026-05-17. |
 
 Corpus: 53 Alberta OHS safety documents, 2,674 chunks.
 
@@ -19,11 +18,11 @@ Corpus: 53 Alberta OHS safety documents, 2,674 chunks.
 
 ### FC-005: Domain scope failure (remediated 2026-05-17)
 
-**Failure observed in KDAT-001B (2026-04-11).** Query "What are our greenhouse gas reporting requirements under TIER?" returned five OHS Code chunks from Part 36 (Mining) and Part 10 (Fire and Explosion) about methane monitoring, with `evidence_sufficient: true` and a verbatim answer drawn from mine gas reporting procedures. TIER is Alberta's Technology Innovation and Emissions Reduction Regulation — an emissions framework not in the OHS corpus.
+**Failure observed in KDAT-001B (2026-04-11).** Query "What are our greenhouse gas reporting requirements under TIER?" returned five OHS Code chunks from Part 36 (Mining) and Part 10 (Fire and Explosion) about methane monitoring, with `evidence_sufficient: true` and a verbatim answer drawn from mine gas reporting procedures. TIER is Alberta's Technology Innovation and Emissions Reduction Regulation, an emissions framework not in the OHS corpus.
 
 **Root cause.** Three independent contributing factors: (1) retrieval-side embedding overlap on the token "gas", (2) HHEM-2.1-Open correctly scored answer-chunk factual consistency but does not check query-corpus relevance, (3) no pipeline stage checked whether the query topic matched the corpus topic.
 
-**Remediation.** Pre-retrieval domain scope guard added to the query pipeline. Phrase-based block-list anchors (greenhouse gas, emissions reporting, carbon pricing, WCB claim, workers compensation, T2 corporate, income tax filing, Microsoft 365, Office 365). Mirrors the existing jurisdiction guard pattern. New refusal reason `DOMAIN_OUT_OF_SCOPE` flows through the existing HMAC audit chain. Deployed in `keystone-api:v0.5.2`.
+**Remediation.** Pre-retrieval domain scope guard added to the query pipeline. Phrase-based block-list anchors covering out-of-corpus topics with vocabulary overlap risk (emissions, workers compensation, tax, common SaaS platforms). The exact phrase set is implementation detail; see commit 38ef89f. Mirrors the existing jurisdiction guard pattern. New refusal reason `DOMAIN_OUT_OF_SCOPE` flows through the existing HMAC audit chain. Deployed in `keystone-api:v0.5.2`.
 
 **Validation.**
 - FC-005 query refused with `DOMAIN_OUT_OF_SCOPE` (verified via local API and via `demo.getkeystone.ai`)
@@ -38,8 +37,7 @@ Corpus: 53 Alberta OHS safety documents, 2,674 chunks.
 
 ## Sealed artifacts
 
-The KDAT-001B baseline was sealed on 2026-04-11. All run artifacts are committed
-to this repository:
+The KDAT-001B baseline was sealed on 2026-04-11. All run artifacts are committed to this repository:
 
 | Path | Contents |
 |---|---|
@@ -64,8 +62,7 @@ Planned remediations for KDAT-002:
 
 ## Related
 
-- [governed-incident-agent](https://github.com/arnaldosepulveda/governed-incident-agent) —
-  Hackathon demo applying KDAT-002 governance architecture to a CopilotKit generative UI. Per-action authorization, fail-closed refusal, audit trail rendered as interactive components. AI Tinkerers Generative UI Hackathon, Boston, May 9, 2026.
+- [governed-incident-agent](https://github.com/arnaldosepulveda/governed-incident-agent). Hackathon demo applying KDAT-002 governance architecture to a CopilotKit generative UI. Per-action authorization, fail-closed refusal, audit trail rendered as interactive components. AI Tinkerers Generative UI Hackathon, Boston, May 9, 2026.
 
 ## What is not claimed
 
