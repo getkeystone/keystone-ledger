@@ -1,6 +1,6 @@
-# Keystone AI — Evaluation Evidence
+# Keystone Applied Intelligence — Evaluation Evidence
 
-Keystone AI is a governed knowledge retrieval system for regulated industries. This repo documents what has been built, what evidence backs each claim, and what each capability explicitly does not prove.
+Keystone Applied Intelligence is a governed knowledge retrieval system for regulated industries. This repo documents what has been built, what evidence backs each claim, and what each capability explicitly does not prove.
 
 ## Current evaluation baseline (KDAT-001B, 2026-04-11)
 
