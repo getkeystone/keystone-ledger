@@ -1,6 +1,6 @@
 # Contributing
 
-This repository is the public milestone ledger for Keystone AI. It is a
+This repository is the public milestone ledger for Keystone Applied Intelligence. It is a
 read-only evidence reference — not an open-source project accepting code
 contributions.
 
