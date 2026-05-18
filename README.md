@@ -1,4 +1,4 @@
-# Keystone AI — Evaluation Evidence
+# Keystone AI -- Evaluation Evidence
 
 Keystone AI is a governed knowledge retrieval system for regulated industries. This repo documents what has been built, what evidence backs each claim, and what each capability explicitly does not prove.
 
@@ -10,18 +10,59 @@ Keystone AI is a governed knowledge retrieval system for regulated industries. T
 | Mean reciprocal rank (MRR) | 0.79 |
 | Adversarial ACL testing | 8/8 blocked, 0 leaks |
 | Audit chain integrity | Intact, immutable |
-| Fail-closed (out-of-scope) | 5/6 (83%) |
+| Fail-closed (out-of-scope) | 5/6 (83%). FC-005 remediated 2026-05-17. |
 
 Corpus: 53 Alberta OHS safety documents, 2,674 chunks.
+
+## Remediations since baseline
+
+### FC-005: Domain scope failure (remediated 2026-05-17)
+
+**Failure observed in KDAT-001B (2026-04-11).** Query "What are our greenhouse gas reporting requirements under TIER?" returned five OHS Code chunks from Part 36 (Mining) and Part 10 (Fire and Explosion) about methane monitoring, with `evidence_sufficient: true` and a verbatim answer drawn from mine gas reporting procedures. TIER is Alberta's Technology Innovation and Emissions Reduction Regulation, an emissions framework not in the OHS corpus.
+
+**Root cause.** Three independent contributing factors: (1) retrieval-side embedding overlap on the token "gas", (2) HHEM-2.1-Open correctly scored answer-chunk factual consistency but does not check query-corpus relevance, (3) no pipeline stage checked whether the query topic matched the corpus topic.
+
+**Remediation.** Pre-retrieval domain scope guard added to the query pipeline. Phrase-based block-list anchors covering out-of-corpus topics with vocabulary overlap risk (emissions, workers compensation, tax, common SaaS platforms). The exact phrase set is implementation detail; see commit 38ef89f. Mirrors the existing jurisdiction guard pattern. New refusal reason `DOMAIN_OUT_OF_SCOPE` flows through the existing HMAC audit chain. Deployed in `keystone-api:v0.5.2`.
+
+**Validation.**
+- FC-005 query refused with `DOMAIN_OUT_OF_SCOPE` (verified via local API and via `demo.getkeystone.ai`)
+- WCB claim query refused with `DOMAIN_OUT_OF_SCOPE`
+- Lockout/tagout query still returns approved guidance
+- Confined space entry query still returns approved guidance
+- Audit chain HMAC preserved; sources empty on refusal
+
+**Scope.** Demo-grade remediation. Full taxonomy-based two-stage gate (using Alberta OHS Code Parts as the authoritative taxonomy plus a post-retrieval intersection check) is scoped for KDAT-002.
+
+**Commits.** [38ef89f](https://github.com/getkeystone/keystone-gov/commit/38ef89f) (merge to `dev/keystone-next`).
+
+## Sealed artifacts
+
+The KDAT-001B baseline was sealed on 2026-04-11. All run artifacts are committed to this repository:
+
+| Path | Contents |
+|---|---|
+| [`artifacts/kdat-001B/report.md`](artifacts/kdat-001B/report.md) | Human-readable summary with per-test results |
+| [`artifacts/kdat-001B/results.json`](artifacts/kdat-001B/results.json) | Machine-readable per-test scores |
+| [`artifacts/kdat-001B/run_metadata.json`](artifacts/kdat-001B/run_metadata.json) | SUT commit, model versions, thresholds, dataset/config hashes |
+| [`artifacts/kdat-001B/audit_chain_dump.json`](artifacts/kdat-001B/audit_chain_dump.json) | Full HMAC chain (30 entries, 29 links) for chain verification |
+| [`artifacts/kdat-001B/raw_responses/`](artifacts/kdat-001B/raw_responses/) | 30 raw API responses (8 RQ, 6 FC, 8 ACL paired, 8 ADV) |
+
+System under test: keystone-gov at commit `c04bb6e58490222bdf4194172976cfa52df8442e`.
+
+KDAT-002 (next baseline, target 2026-05-22) extends this baseline with: domain-relevance gate, expanded adversarial probe set (12 to 16 probes), HMAC chain tamper-evidence property test, and Wilson 95% CI reporting on the expanded set.
 
 ## In development
 
 Governed agent extension (KDAT-002): tool authorization by role, action audit trails, HITL approval gates, multi-step reasoning with per-step evidence. Same governance primitives applied to tool-using agents.
 
+Planned remediations for KDAT-002:
+- FC-005: two-stage gate with OHS Code Parts as the taxonomy (replaces the demo-grade phrase block-list)
+- Sealed re-evaluation of FC-001 through FC-006 with the gate enabled
+- Adversarial set expansion (out-of-corpus, in-corpus wrong-Part with shared vocab, border queries spanning multiple Parts, false-refusal probes)
+
 ## Related
 
-- [governed-incident-agent](https://github.com/arnaldosepulveda/governed-incident-agent) —
-  Hackathon demo applying KDAT-002 governance architecture to a CopilotKit generative UI. Per-action authorization, fail-closed refusal, audit trail rendered as interactive components.
+- [governed-incident-agent](https://github.com/arnaldosepulveda/governed-incident-agent). Hackathon demo applying KDAT-002 governance architecture to a CopilotKit generative UI. Per-action authorization, fail-closed refusal, audit trail rendered as interactive components. AI Tinkerers Generative UI Hackathon, Boston, May 9, 2026.
 
 ## What is not claimed
 
