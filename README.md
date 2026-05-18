@@ -10,6 +10,7 @@ Keystone Applied Intelligence is a governed knowledge retrieval system for regul
 | Mean reciprocal rank (MRR) | 0.79 |
 | Adversarial ACL testing | 8/8 blocked, 0 leaks |
 | Audit chain integrity | Intact, immutable |
+
 | Fail-closed (out-of-scope) | 5/6 (83%) — FC-005 remediated 2026-05-17 |
 
 Corpus: 53 Alberta OHS safety documents, 2,674 chunks.
