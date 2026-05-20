@@ -49,25 +49,20 @@ The KDAT-001B baseline was sealed on 2026-04-11. All run artifacts are committed
 
 System under test: keystone-gov at commit `c04bb6e58490222bdf4194172976cfa52df8442e`.
 
-KDAT-002 (eval execution target late August to September 2026) extends this baseline with: domain-relevance gate, expanded adversarial probe set (12 to 16 probes), HMAC chain tamper-evidence property test, and Wilson 95% CI reporting on the expanded set.
+## KDAT-002B (2026-05-20) — Governed agent extension
 
-## KDAT-002 status
+**Verdict: PASS — H1 confirmed.**
 
-Governed agent extension: tool authorization by role, action audit trails, HITL approval gates, multi-step reasoning with per-step evidence. Same governance primitives applied to tool-using agents.
+The governance primitives proven in KDAT-001B (RBAC, evidence thresholding, fail-closed gates, HMAC audit chain) extend to tool-using agents without redesign. Same controller that governs what the system says also governs what it does.
 
-**Spec:** v1.2 ([commit 4b12094](https://github.com/getkeystone/keystone-kdat/commit/4b12094)). Canonical contract: [KDAT-002-SPEC.md](KDAT-002-SPEC.md).
-
-### KDAT-002B — 2026-05-20 (keystone-api:v0.6.1, corpus-loaded) — Verdict: PASS
+**Spec:** KDAT-002-SPEC v1.2 ([commit 4b12094](https://github.com/getkeystone/keystone-kdat/commit/4b12094)). System under test: keystone-api:v0.6.1. Corpus: 135 docs, 23,684 embedded chunks.
 
 | Metric | Result |
 |---|---|
 | Cases | 66 (× 3 runs = 198 executions) |
 | Strict pass | 58 |
-| Strict fail | 0 |
+| Strict fail | **0** |
 | Characterization | 8 |
-| Corpus | 135 docs, 23,684 embedded chunks |
-
-**H1 confirmed.** All adversarial categories 100% strict pass.
 
 | Category | Result |
 |---|---|
@@ -83,16 +78,22 @@ Governed agent extension: tool authorization by role, action audit trails, HITL 
 | T12.1–T12.5 Huyen adversarial failure modes | 7/7 |
 | T12.7 Step constraint (depth cap) | 1/1 |
 
-Full report: [`artifacts/kdat-002/KDAT-002-RESULTS-2b.md`](artifacts/kdat-002/KDAT-002-RESULTS-2b.md)
+**Sealed artifacts:** [`artifacts/kdat-002b/`](artifacts/kdat-002b/)
 
-Prior run (corpus-empty, verdict FAIL): [`artifacts/kdat-002/KDAT-002-RESULTS.md`](artifacts/kdat-002/KDAT-002-RESULTS.md) — preserved per Section 9.5 re-run policy.
+**Prior run (corpus-empty, verdict FAIL):** [`artifacts/kdat-002/`](artifacts/kdat-002/) — same 66 cases run before corpus ingestion. Preserved per KDAT-002-SPEC Section 9.5 re-run policy. All 13 failures in that run were corpus-dependent (`evidence_score 0.0000 < threshold 0.5000`).
 
-### Remaining gaps before KDAT-003
+**Infrastructure bugs found and fixed in M8** (five latent bugs surfaced by fresh-install deployment):
+1. keystone_app password mismatch in `initdb/01-roles.sql` — would block every fresh install
+2. `feedback_signals` table missing from all `initdb/` scripts — FK violation on API startup
+3. Agent tables missing from `initdb/` — `agent/health` returned `tables_missing: True` on fresh install
+4. Audit chain HMAC tz-naive/tz-aware timestamp mismatch — chain always failed verification before fix
+5. Ingest NUL-byte crash — pdfminer NUL bytes caused psycopg2 `ValueError` on chunk insert
 
+**Remaining gaps before KDAT-003:**
 - Case count expansion to spec minimums (T01≥20, T02≥20, T03≥15, T04≥15, T05≥10, T08≥10, T12.1–T12.5≥5)
 - FC-005 two-stage domain gate (replaces demo-grade phrase block-list)
-- Corpus domain metadata correction (current: auto-inferred `fire_ops`; correct: `ohs_alberta`)
-- Formal stability, observability, controllability proofs (KDAT-003)
+- Corpus domain metadata correction (`fire_ops` → `ohs_alberta`)
+- Formal stability, observability, controllability proofs
 
 ## Related
 
