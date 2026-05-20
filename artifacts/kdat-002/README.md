@@ -3,7 +3,7 @@
 **Milestone:** KDAT-002 (governed agent extension)
 **Spec:** [KDAT-002-SPEC.md](../../KDAT-002-SPEC.md) v1.2 (commit 4b12094)
 **Eval date:** 2026-05-20
-**Verdict: FAIL** — mandatory downgrade triggers hit (T02-005, T07-003); both corpus-dependent
+**Verdict: PASS** (KDAT-002B, corpus-loaded)
 
 ---
 
@@ -11,45 +11,56 @@
 
 | File | Description |
 |---|---|
-| `KDAT-002-RESULTS.md` | Full evaluation report per KDAT-002-SPEC Section 11 format |
-| `production_run_2026-05-20.jsonl` | Raw per-run results (66 cases × 3 runs = 198 executions) |
+| `KDAT-002-RESULTS-2b.md` | Full evaluation report — KDAT-002B (corpus-loaded, verdict PASS) |
+| `production_run_2026-05-20_2b.jsonl` | Raw per-run results — KDAT-002B (58 strict / 0 fail / 8 char) |
+| `KDAT-002-RESULTS.md` | Full evaluation report — KDAT-002 (corpus-empty, verdict FAIL) |
+| `production_run_2026-05-20.jsonl` | Raw per-run results — KDAT-002 (45 strict / 13 fail / 8 char) |
 
 ---
 
-## Summary
+## KDAT-002B summary (corpus-loaded, verdict PASS)
 
 | Metric | Value |
 |---|---|
 | Total cases | 66 |
 | Total executions | 198 |
-| Strict pass | 45 |
-| Strict fail | 13 |
+| Strict pass | 58 |
+| Strict fail | 0 |
 | Characterization | 8 |
-| Verdict | **FAIL** |
+| Verdict | **PASS** |
+| Corpus | 135 docs, 23,684 chunks, all embedded |
 
-**Root cause of all 13 failures:** Corpus not loaded on fresh demo DB (Alberta OHS 53-document corpus not ingested). All failures share `terminated_reason: step_0_P2.1: evidence_score 0.0000 < threshold 0.5000`. No architectural defects identified.
+**H1 confirmed:** Governance primitives (RBAC, evidence thresholding, fail-closed gates, hash-chained audit logging) extend to tool-using agents without redesign.
 
-**Governance controls verified (corpus-independent):**
-- T03 HITL routing: 5/5
-- T04 HITL bypass resistance: 4/4
-- T08 Prompt injection on parameters: 5/5
-- T12.1 Invalid tool rejection: 2/2
-- T12.2 Invalid parameter rejection: 2/2
-- T12.4 Missing tool graceful refusal: 1/1
-- T12.5 False reflection detection: 2/2
-- T07-001 Audit chain integrity (single-step): 3/3
-- T07-002 Tamper detection: 3/3
-
-**Next step:** KDAT-002B — corpus-loaded re-eval on same deployment.
+| Category | N | Strict pass | Verdict |
+|---|---|---|---|
+| T01 Tool authorization (positive) | 8 | 8 | Pass |
+| T02 Tool authorization (adversarial) | 8 | 8 | Pass |
+| T03 HITL positive | 5 | 5 | Pass |
+| T04 HITL bypass resistance | 4 | 4 | Pass |
+| T05 Evidence gating | 3 | 1 + 2 char | Pass |
+| T06 Citation coverage | 3 | 3 | Pass |
+| T07 Audit integrity | 3 | 3 | Pass |
+| T08 Prompt injection | 5 | 5 | Pass |
+| T09 STRIDE coverage | 6 | 6 | Pass |
+| T10 Severity tier coverage | 7 | 7 | Pass |
+| T11 Plausible but wrong | 3 | 3 char | Characterization |
+| T12.1–T12.5 Huyen adversarial | 7 | 7 | Pass |
+| T12.6 Goal failure | 1 | 1 char | Characterization |
+| T12.7 Step constraint | 1 | 1 | Pass |
 
 ---
 
-## Infrastructure bugs found in M8
+## KDAT-002 summary (corpus-empty, verdict FAIL — preserved)
 
-Three latent bugs discovered during the fresh-install deploy (all fixed, committed to keystone-demo):
-1. keystone_app password mismatch (`initdb/01-roles.sql`)
-2. `feedback_signals` table missing from initdb (`initdb/19-feedback-signals.sql`)
-3. Agent tables missing from initdb (`initdb/27-agent-schema.sql`)
+Identical case set run same day before corpus ingestion. All 13 failures were corpus-dependent (`evidence_score 0.0000 < threshold 0.5000`). Preserved per KDAT-002-SPEC Section 9.5 re-run policy.
 
-One bug in keystone-gov fixed as prerequisite for T07 passing:
-4. Audit chain timestamp tz-naive/tz-aware mismatch (`agent/audit.py`, commit `fe28ee8`)
+---
+
+## Infrastructure bugs found and fixed in M8
+
+1. keystone_app password mismatch (`initdb/01-roles.sql`) — fixed
+2. `feedback_signals` table missing from initdb (`initdb/19-feedback-signals.sql`) — fixed
+3. Agent tables missing from initdb (`initdb/27-agent-schema.sql`) — fixed
+4. Audit chain timestamp tz-naive/tz-aware mismatch (`agent/audit.py` commit `fe28ee8`) — fixed
+5. Ingest NUL-byte crash (`ingest_corpus.py` line 455, `chunk_str.replace('\x00', '')`) — fixed

@@ -57,40 +57,42 @@ Governed agent extension: tool authorization by role, action audit trails, HITL 
 
 **Spec:** v1.2 ([commit 4b12094](https://github.com/getkeystone/keystone-kdat/commit/4b12094)). Canonical contract: [KDAT-002-SPEC.md](KDAT-002-SPEC.md).
 
-### M8 eval run — 2026-05-20 (keystone-api:v0.6.1, corpus-empty) — Verdict: FAIL
+### KDAT-002B — 2026-05-20 (keystone-api:v0.6.1, corpus-loaded) — Verdict: PASS
 
 | Metric | Result |
 |---|---|
 | Cases | 66 (× 3 runs = 198 executions) |
-| Strict pass | 45 |
-| Strict fail | 13 |
+| Strict pass | 58 |
+| Strict fail | 0 |
 | Characterization | 8 |
-| Mandatory downgrade triggers | T02-005, T07-003 (both corpus-dependent) |
-| Root cause of all failures | Corpus not loaded on fresh demo DB |
+| Corpus | 135 docs, 23,684 embedded chunks |
 
-**Governance controls verified (corpus-independent):**
+**H1 confirmed.** All adversarial categories 100% strict pass.
 
 | Category | Result |
 |---|---|
+| T01 Tool authorization (positive) | 8/8 |
+| T02 Tool authorization (adversarial) | 8/8 |
 | T03 HITL routing | 5/5 |
 | T04 HITL bypass resistance | 4/4 |
+| T06 Citation coverage | 3/3 |
+| T07 Audit chain integrity | 3/3 |
 | T08 Prompt injection on parameters | 5/5 |
-| T07 Audit chain integrity (single-step + tamper detection) | 2/3 (T07-003 corpus-dependent) |
+| T09 STRIDE coverage (all 6 categories) | 6/6 |
+| T10 Severity tier coverage (all 4 tiers) | 7/7 |
 | T12.1–T12.5 Huyen adversarial failure modes | 7/7 |
+| T12.7 Step constraint (depth cap) | 1/1 |
 
-All governance controls that do not depend on corpus retrieval pass. KDAT-002B (corpus-loaded re-eval) required to confirm primary hypothesis H1.
+Full report: [`artifacts/kdat-002/KDAT-002-RESULTS-2b.md`](artifacts/kdat-002/KDAT-002-RESULTS-2b.md)
 
-Full report: [`artifacts/kdat-002/KDAT-002-RESULTS.md`](artifacts/kdat-002/KDAT-002-RESULTS.md)
+Prior run (corpus-empty, verdict FAIL): [`artifacts/kdat-002/KDAT-002-RESULTS.md`](artifacts/kdat-002/KDAT-002-RESULTS.md) — preserved per Section 9.5 re-run policy.
 
-### Corpus-loaded re-eval target
+### Remaining gaps before KDAT-003
 
-**KDAT-002B target:** Late August to September 2026 (aligned with Alberta OHS corpus ingestion and greenfield implementation schedule).
-
-Planned for KDAT-002B scope:
-- FC-005: two-stage gate with OHS Code Parts as the taxonomy (replaces demo-grade phrase block-list)
-- Sealed re-evaluation of FC-001 through FC-006 with the gate enabled
-- Adversarial set expansion (out-of-corpus, in-corpus wrong-Part with shared vocab, border queries spanning multiple Parts, false-refusal probes)
-- Case count expansion to spec minimums (T01≥20, T02≥20, T03≥15, T04≥15, T05≥10, T08≥10)
+- Case count expansion to spec minimums (T01≥20, T02≥20, T03≥15, T04≥15, T05≥10, T08≥10, T12.1–T12.5≥5)
+- FC-005 two-stage domain gate (replaces demo-grade phrase block-list)
+- Corpus domain metadata correction (current: auto-inferred `fire_ops`; correct: `ohs_alberta`)
+- Formal stability, observability, controllability proofs (KDAT-003)
 
 ## Related
 
