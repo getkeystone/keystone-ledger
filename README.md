@@ -49,13 +49,17 @@ The KDAT-001B baseline was sealed on 2026-04-11. All run artifacts are committed
 
 System under test: keystone-gov at commit `c04bb6e58490222bdf4194172976cfa52df8442e`.
 
-KDAT-002 (next baseline, target 2026-05-22) extends this baseline with: domain-relevance gate, expanded adversarial probe set (12 to 16 probes), HMAC chain tamper-evidence property test, and Wilson 95% CI reporting on the expanded set.
+KDAT-002 (eval execution target late August to September 2026) extends this baseline with: domain-relevance gate, expanded adversarial probe set (12 to 16 probes), HMAC chain tamper-evidence property test, and Wilson 95% CI reporting on the expanded set.
 
-## In development
+## KDAT-002 status
 
-Governed agent extension (KDAT-002): tool authorization by role, action audit trails, HITL approval gates, multi-step reasoning with per-step evidence. Same governance primitives applied to tool-using agents.
+Governed agent extension: tool authorization by role, action audit trails, HITL approval gates, multi-step reasoning with per-step evidence. Same governance primitives applied to tool-using agents.
 
-Planned remediations for KDAT-002:
+**Spec:** v1.2 landed ([commit 4b12094](https://github.com/getkeystone/keystone-kdat/commit/4b12094)). Canonical contract: [KDAT-002-SPEC.md](KDAT-002-SPEC.md).  
+**Milestone:** M1 scaffold complete.  
+**Eval execution target:** Late August to September 2026.
+
+Planned remediations in scope for KDAT-002 eval:
 - FC-005: two-stage gate with OHS Code Parts as the taxonomy (replaces the demo-grade phrase block-list)
 - Sealed re-evaluation of FC-001 through FC-006 with the gate enabled
 - Adversarial set expansion (out-of-corpus, in-corpus wrong-Part with shared vocab, border queries spanning multiple Parts, false-refusal probes)
