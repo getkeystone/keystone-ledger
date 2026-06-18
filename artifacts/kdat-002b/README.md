@@ -1,6 +1,6 @@
-# Artifact — KDAT-002B
+# Artifact — keystone-core/agent-v0-pre (formerly KDAT-002B)
 
-**Milestone:** KDAT-002 governed agent extension — corpus-loaded re-eval
+**Milestone:** keystone-core/agent (formerly KDAT-002) governed agent extension — corpus-loaded re-eval
 **Spec:** [KDAT-002-SPEC.md](../../KDAT-002-SPEC.md) v1.2 (commit 4b12094)
 **Eval date:** 2026-05-20
 **System:** keystone-api:v0.6.1 (Docker Compose, keystone-demo stack)
@@ -13,7 +13,7 @@
 
 | File | Description |
 |---|---|
-| `KDAT-002-RESULTS-2b.md` | Full evaluation report per KDAT-002-SPEC Section 11 format |
+| `KDAT-002-RESULTS-2b.md` | Full evaluation report per keystone-core/agent-spec Section 11 format |
 | `production_run_2026-05-20_2b.jsonl` | Raw per-run results (66 cases × 3 runs = 198 executions) |
 
 Prior run (same cases, corpus-empty, verdict FAIL): [`artifacts/kdat-002/`](../kdat-002/)

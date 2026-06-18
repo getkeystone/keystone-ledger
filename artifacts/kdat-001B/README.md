@@ -1,4 +1,4 @@
-# KDAT-001B -- Baseline Eval Evidence
+# keystone-core/retrieval-v1 (formerly KDAT-001B) -- Baseline Eval Evidence
 
 **Date:** 2026-04-11
 **API:** keystone-api:v0.5.1 (demo stack, port 8002)

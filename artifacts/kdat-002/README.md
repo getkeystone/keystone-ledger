@@ -1,9 +1,9 @@
 # Artifact — KDAT-002
 
-**Milestone:** KDAT-002 (governed agent extension)
+**Milestone:** keystone-core/agent (formerly KDAT-002) (governed agent extension)
 **Spec:** [KDAT-002-SPEC.md](../../KDAT-002-SPEC.md) v1.2 (commit 4b12094)
 **Eval date:** 2026-05-20
-**Verdict: PASS** (KDAT-002B, corpus-loaded)
+**Verdict: PASS** (keystone-core/agent-v0-pre (formerly KDAT-002B), corpus-loaded)
 
 ---
 
@@ -11,14 +11,14 @@
 
 | File | Description |
 |---|---|
-| `KDAT-002-RESULTS-2b.md` | Full evaluation report — KDAT-002B (corpus-loaded, verdict PASS) |
-| `production_run_2026-05-20_2b.jsonl` | Raw per-run results — KDAT-002B (58 strict / 0 fail / 8 char) |
+| `KDAT-002-RESULTS-2b.md` | Full evaluation report — keystone-core/agent-v0-pre (corpus-loaded, verdict PASS) |
+| `production_run_2026-05-20_2b.jsonl` | Raw per-run results — keystone-core/agent-v0-pre (58 strict / 0 fail / 8 char) |
 | `KDAT-002-RESULTS.md` | Full evaluation report — KDAT-002 (corpus-empty, verdict FAIL) |
 | `production_run_2026-05-20.jsonl` | Raw per-run results — KDAT-002 (45 strict / 13 fail / 8 char) |
 
 ---
 
-## KDAT-002B summary (corpus-loaded, verdict PASS)
+## keystone-core/agent-v0-pre summary (corpus-loaded, verdict PASS)
 
 | Metric | Value |
 |---|---|
@@ -53,7 +53,7 @@
 
 ## KDAT-002 summary (corpus-empty, verdict FAIL — preserved)
 
-Identical case set run same day before corpus ingestion. All 13 failures were corpus-dependent (`evidence_score 0.0000 < threshold 0.5000`). Preserved per KDAT-002-SPEC Section 9.5 re-run policy.
+Identical case set run same day before corpus ingestion. All 13 failures were corpus-dependent (`evidence_score 0.0000 < threshold 0.5000`). Preserved per keystone-core/agent-spec Section 9.5 re-run policy.
 
 ---
 

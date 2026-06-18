@@ -7,7 +7,7 @@
 - **Now:** Retrieval Tuning Baseline -- COMPLETED at 80% answer quality, 86% FCS
 - **Evidence:** eval_results_1774525517.json (final run), 4 progressive eval rounds
 
-### KDAT-001B (completed)
+### keystone-core/retrieval-v1 (formerly KDAT-001B) (completed)
 - **Was:** Eval Harness (outstanding, must produce quantitative evidence)
 - **Now:** Eval Harness COMPLETED -- 30 queries, 9 categories, 80% answer quality, 86% FCS mean
 - **Evidence:** eval harness at scripts/eval_harness.py; 4 result JSON files
@@ -15,7 +15,7 @@
 
 ## New KDATs
 
-### KDAT-089: KDAT-001B Eval Harness Baseline
+### KDAT-089: keystone-core/retrieval-v1 Eval Harness Baseline
 **Status:** Proven
 **Evidence:** eval_results_1774516425.json through eval_results_1774525517.json (4 runs). scripts/eval_harness.py.
 **Description:** Structured 30-query evaluation harness producing JSON evidence artifacts. 9 categories: safety procedures, hazard assessment, training, emergency response, PPE, confined space, off-topic refusal, system prompt probing, edge cases. Progression: 64% -> 72% -> 80% answer quality. FCS mean: 58% -> 86%.

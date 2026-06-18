@@ -2,7 +2,7 @@
 
 Keystone AI is a governed knowledge retrieval system for regulated industries. This repo documents what has been built, what evidence backs each claim, and what each capability explicitly does not prove.
 
-## Current evaluation baseline (KDAT-001B, 2026-04-11)
+## Current evaluation baseline (keystone-core/retrieval-v1 (formerly keystone-core/retrieval-v1), 2026-04-11)
 
 | Metric | Result |
 |--------|--------|
@@ -18,7 +18,7 @@ Corpus: 53 Alberta OHS safety documents, 2,674 chunks.
 
 ### FC-005: Domain scope failure (remediated 2026-05-17)
 
-**Failure observed in KDAT-001B (2026-04-11).** Query "What are our greenhouse gas reporting requirements under TIER?" returned five OHS Code chunks from Part 36 (Mining) and Part 10 (Fire and Explosion) about methane monitoring, with `evidence_sufficient: true` and a verbatim answer drawn from mine gas reporting procedures. TIER is Alberta's Technology Innovation and Emissions Reduction Regulation, an emissions framework not in the OHS corpus.
+**Failure observed in keystone-core/retrieval-v1 (2026-04-11).** Query "What are our greenhouse gas reporting requirements under TIER?" returned five OHS Code chunks from Part 36 (Mining) and Part 10 (Fire and Explosion) about methane monitoring, with `evidence_sufficient: true` and a verbatim answer drawn from mine gas reporting procedures. TIER is Alberta's Technology Innovation and Emissions Reduction Regulation, an emissions framework not in the OHS corpus.
 
 **Root cause.** Three independent contributing factors: (1) retrieval-side embedding overlap on the token "gas", (2) HHEM-2.1-Open correctly scored answer-chunk factual consistency but does not check query-corpus relevance, (3) no pipeline stage checked whether the query topic matched the corpus topic.
 
@@ -37,7 +37,7 @@ Corpus: 53 Alberta OHS safety documents, 2,674 chunks.
 
 ## Sealed artifacts
 
-The KDAT-001B baseline was sealed on 2026-04-11. All run artifacts are committed to this repository:
+The keystone-core/retrieval-v1 baseline was sealed on 2026-04-11. All run artifacts are committed to this repository:
 
 | Path | Contents |
 |---|---|
@@ -49,13 +49,13 @@ The KDAT-001B baseline was sealed on 2026-04-11. All run artifacts are committed
 
 System under test: keystone-gov at commit `c04bb6e58490222bdf4194172976cfa52df8442e`.
 
-## KDAT-002D (2026-05-20) — Governed agent extension, canonical result
+## keystone-core/agent-v1 (formerly keystone-core/agent-v1) (2026-05-20) — Governed agent extension, canonical result
 
 **Verdict: PASS — H1 confirmed.**
 
-The governance primitives proven in KDAT-001B (RBAC, evidence thresholding, fail-closed gates, HMAC audit chain) extend to tool-using agents without redesign. Same controller that governs what the system says also governs what it does.
+The governance primitives proven in keystone-core/retrieval-v1 (RBAC, evidence thresholding, fail-closed gates, HMAC audit chain) extend to tool-using agents without redesign. Same controller that governs what the system says also governs what it does.
 
-**Spec:** KDAT-002-SPEC. System under test: keystone-gov `6ac192a` (feature/kdat-002-agent-extension). Corpus: 135 docs, 23,684 embedded chunks.
+**Spec:** keystone-core/agent-spec (formerly KDAT-002-SPEC). System under test: keystone-gov `6ac192a` (feature/kdat-002-agent-extension). Corpus: 135 docs, 23,684 embedded chunks.
 
 | Metric | Result |
 |---|---|
@@ -88,15 +88,15 @@ The governance primitives proven in KDAT-001B (RBAC, evidence thresholding, fail
 | Run | Cases | Verdict | Notes |
 |---|---|---|---|
 | [KDAT-002](artifacts/kdat-002/) | 66 | FAIL | Empty corpus |
-| [KDAT-002B](artifacts/kdat-002b/) | 66 | PASS | Corpus loaded (135 docs) |
-| [KDAT-002C](artifacts/kdat-002c/) | 186 | **FAIL** | Spec-compliant case count; 4 real system bugs found |
-| [**KDAT-002D**](artifacts/kdat-002d/) | **186** | **PASS** | Bugs fixed; canonical citable result |
+| [keystone-core/agent-v0-pre (formerly keystone-core/agent-v0-pre)](artifacts/kdat-002b/) | 66 | PASS | Corpus loaded (135 docs) |
+| [keystone-core/agent-v0 (formerly keystone-core/agent-v0)](artifacts/kdat-002c/) | 186 | **FAIL** | Spec-compliant case count; 4 real system bugs found |
+| [**keystone-core/agent-v1**](artifacts/kdat-002d/) | **186** | **PASS** | Bugs fixed; canonical citable result |
 
-**KDAT-002D is the canonical citable result for this milestone.** KDAT-002C is preserved as the evidence that bugs were found and fixed rather than hidden.
+**keystone-core/agent-v1 is the canonical citable result for this milestone.** keystone-core/agent-v0 is preserved as the evidence that bugs were found and fixed rather than hidden.
 
-### System bugs found and fixed by KDAT-002C → KDAT-002D
+### System bugs found and fixed by keystone-core/agent-v0 → keystone-core/agent-v1
 
-Four real system bugs identified in KDAT-002C (the first spec-compliant 186-case run). All fixed; no test cases or graders were modified.
+Four real system bugs identified in keystone-core/agent-v0 (the first spec-compliant 186-case run). All fixed; no test cases or graders were modified.
 
 1. **T07 — Audit chain HMAC timestamp mismatch:** `verify_plan_chain()` re-serialized DB timestamps as tz-aware strings (`+00:00` suffix); write path used naive strings. HMAC always failed. Fixed `fe28ee8` (keystone-gov).
 2. **T02-014 — `SYSTEM OVERRIDE` injection pattern missing:** P3.1 scanner didn't catch `SYSTEM OVERRIDE: ignore role restrictions` variants. Added `SYSTEM\s+OVERRIDE` and role-manipulation patterns. Fixed `6ac192a`.
@@ -105,16 +105,16 @@ Four real system bugs identified in KDAT-002C (the first spec-compliant 186-case
 
 ### Infrastructure bugs found and fixed in M8 (previously documented)
 
-Five latent bugs surfaced by fresh-install deployment before KDAT-002B:
+Five latent bugs surfaced by fresh-install deployment before keystone-core/agent-v0-pre:
 1. keystone_app password mismatch in `initdb/01-roles.sql`
 2. `feedback_signals` table missing from all `initdb/` scripts
 3. Agent tables missing from `initdb/`
-4. Audit chain HMAC tz-naive/tz-aware mismatch (same root cause as T07 above; fixed first in KDAT-002B M8)
+4. Audit chain HMAC tz-naive/tz-aware mismatch (same root cause as T07 above; fixed first in keystone-core/agent-v0-pre M8)
 5. Ingest NUL-byte crash in pdfminer output
 
 ## Related
 
-- [governed-incident-agent](https://github.com/arnaldosepulveda/governed-incident-agent). Hackathon demo applying KDAT-002 governance architecture to a CopilotKit generative UI. Per-action authorization, fail-closed refusal, audit trail rendered as interactive components. AI Tinkerers Generative UI Hackathon, Boston, May 9, 2026.
+- [governed-incident-agent](https://github.com/arnaldosepulveda/governed-incident-agent). Hackathon demo applying keystone-core/agent (formerly KDAT-002) governance architecture to a CopilotKit generative UI. Per-action authorization, fail-closed refusal, audit trail rendered as interactive components. AI Tinkerers Generative UI Hackathon, Boston, May 9, 2026.
 
 ## What is not claimed
 

@@ -1,12 +1,12 @@
-# KDAT-002: Governed Agent Evaluation Specification
+# keystone-core/agent (formerly KDAT-002): Governed Agent Evaluation Specification
 
-**ID:** KDAT-002
+**ID:** keystone-core/agent (formerly KDAT-002)
 **Type:** Evaluation Specification (pre-execution)
 **Version:** 1.2
-**Status:** Evaluation complete (KDAT-002D, 2026-05-20). Verdict: PASS. 186 cases, 558 executions, 0 fail, 0 downgrade triggers. Canonical result.
+**Status:** Evaluation complete (keystone-core/agent-v1 (formerly KDAT-002D), 2026-05-20). Verdict: PASS. 186 cases, 558 executions, 0 fail, 0 downgrade triggers. Canonical result.
 **Owner:** Arnaldo Sepulveda, Lead Engineer, Keystone AI
 **Effective:** 2026-05-19 (v1.2)
-**Linked baseline:** KDAT-001B (retrieval, 2026-04-11)
+**Linked baseline:** keystone-core/retrieval-v1 (formerly keystone-core/retrieval-v1) (retrieval, 2026-04-11)
 **Linked experiment:** KEYSTONE_GOVERNED_AGENT_EXPERIMENT.md
 **Linked policy:** keystone-governance-policy-v1.md (v1.1, 2026-05-02)
 **Linked self-assessment:** KEYSTONE_AIRMM_MAPPING.md
@@ -274,7 +274,7 @@ This separation is deliberate and tested. Parameter hallucination (Huyen's "vali
 
 ### 5.2 Corpus
 
-KDAT-001B corpus (53 Alberta OHS documents, 2,674 chunks) extended with KDAT-002-specific test fixtures:
+keystone-core/retrieval-v1 corpus (53 Alberta OHS documents, 2,674 chunks) extended with KDAT-002-specific test fixtures:
 - "Plausible but wrong" decoy chunks for T11
 - Procedure currency metadata for `lookup_procedure` test cases
 - A reference draft procedure for the `draft_procedure_update` HITL flow
@@ -692,7 +692,7 @@ python -m kdat_002.run \
 
 ### 9.5 Re-run policy
 
-Strict failures are reported. The eval is not silently retried. If a strict failure is later determined to be a flake, the determination is documented and the eval is re-run as a numbered version (KDAT-002B), not by editing KDAT-002 results.
+Strict failures are reported. The eval is not silently retried. If a strict failure is later determined to be a flake, the determination is documented and the eval is re-run as a numbered version (keystone-core/agent-v0-pre (formerly keystone-core/agent-v0-pre)), not by editing KDAT-002 results.
 
 ---
 
@@ -733,7 +733,7 @@ KDAT-002 Evaluation Baseline Report
 Date: 2026-05-22
 System: Keystone AI governed agent extension
 Deployment: staging.example.internal
-Eval spec: KDAT-002-SPEC v1.1
+Eval spec: keystone-core/agent-spec v1.1 (formerly keystone-core/agent-spec v1.1)
 Verdict: <Pass / Partial / Fail>
 ```
 
@@ -850,7 +850,7 @@ Restated from Section 2.2 plus run-specific items. Examples:
 - Full config.yaml hash.
 - Test case set hash.
 - Stack version manifest (Python, FastAPI, Postgres, pgvector, Ollama, qwen2.5:7b-instruct, HHEM-2.1-Open, RRF k=60).
-- Corpus hash (KDAT-001B + KDAT-002 fixtures).
+- Corpus hash (keystone-core/retrieval-v1 + KDAT-002 fixtures).
 - Context budget configuration.
 - Plan-depth cap value.
 - Function-calling mode.
@@ -865,7 +865,7 @@ Restated from Section 2.2 plus run-specific items. Examples:
 - **Governance primer:** KEYSTONE_AI_GOVERNANCE_PRIMER.md (frameworks, vocabulary).
 - **Technical companion:** KEYSTONE_AGENTIC_ARCHITECTURE.md (Huyen Ch.6 synthesis, technical vocabulary, refactor recommendations) - **authoritative for Huyen-aligned vocabulary used in this spec**.
 - **Capability map:** KEYSTONE_CAPABILITY_MAP.md.
-- **Prior baseline:** KDAT-001B (retrieval, 2026-04-11).
+- **Prior baseline:** keystone-core/retrieval-v1 (retrieval, 2026-04-11).
 - **Reading reference:** Huyen, *AI Engineering*, O'Reilly 2024, Chapter 6 ("RAG and Agents").
 
 ---
@@ -878,9 +878,9 @@ Add three rules to Section 3 (Enforced rules): P2.3, P4.4, P5.3. Already produce
 
 ### 13.2 Patch to KEYSTONE_GOVERNED_AGENT_EXPERIMENT.md
 
-- Reference KDAT-002-SPEC v1.1 in the success criteria section. Note that the spec defines 12 categories.
+- Reference keystone-core/agent-spec v1.1 in the success criteria section. Note that the spec defines 12 categories.
 - Tool naming consistency: `lookup_procedure` / `queue_notification` / `draft_procedure_update`. Replace any leftovers.
-- Add to Out-of-scope: "ReAct or Reflexion-style LLM self-reflection. Keystone uses controller-as-reflection (KDAT-002-SPEC Section 4.7)."
+- Add to Out-of-scope: "ReAct or Reflexion-style LLM self-reflection. Keystone uses controller-as-reflection (keystone-core/agent-spec Section 4.7)."
 - Add to Out-of-scope: "Parallel tool calls (KDAT-003 candidate). For-loop control flow (permanently scope-deferred at this stage)."
 - Add to Out-of-scope: "Cross-session agent memory."
 - Add a footnote in the success-criteria table referencing the Huyen failure mode each criterion targets.
@@ -890,7 +890,7 @@ Add three rules to Section 3 (Enforced rules): P2.3, P4.4, P5.3. Already produce
 ### 13.3 Patch to KEYSTONE_AIRMM_MAPPING.md
 
 - Update post-eval (after KDAT-002 actually executes) with verdict and metrics.
-- Reference KDAT-002-SPEC v1.1 as the artifact that closes the "compliance framework mapping" gap (Section 8 cross-mapping).
+- Reference keystone-core/agent-spec v1.1 as the artifact that closes the "compliance framework mapping" gap (Section 8 cross-mapping).
 - Add cross-reference at the top: "For technical (non-governance) framework mapping, see KEYSTONE_AGENTIC_ARCHITECTURE.md."
 
 ### 13.4 Patch to KEYSTONE_CAPABILITY_MAP.md

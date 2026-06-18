@@ -1,6 +1,6 @@
-# Artifact — KDAT-002D
+# Artifact — keystone-core/agent-v1 (formerly KDAT-002D)
 
-**Milestone:** KDAT-002 governed agent extension — canonical citable result
+**Milestone:** keystone-core/agent (formerly KDAT-002) governed agent extension — canonical citable result
 **Spec:** [KDAT-002-SPEC.md](../../KDAT-002-SPEC.md)
 **Eval date:** 2026-05-20
 **System:** keystone-gov commit `6ac192a` (feature/kdat-002-agent-extension, local dev port 8000)
@@ -51,9 +51,9 @@
 
 ---
 
-## Bugs fixed between KDAT-002C and KDAT-002D
+## Bugs fixed between keystone-core/agent-v0 and keystone-core/agent-v1
 
-KDAT-002D is a re-run of the identical 186 cases after fixing 4 bugs identified by KDAT-002C. No test cases or graders were modified.
+keystone-core/agent-v1 (formerly KDAT-002D) is a re-run of the identical 186 cases after fixing 4 bugs identified by keystone-core/agent-v0 (formerly KDAT-002C). No test cases or graders were modified.
 
 | Bug | File | Fix |
 |---|---|---|
@@ -69,10 +69,10 @@ KDAT-002D is a re-run of the identical 186 cases after fixing 4 bugs identified 
 | Run | Cases | Verdict | Notes |
 |---|---|---|---|
 | KDAT-002 | 66 | FAIL | Empty corpus |
-| KDAT-002B | 66 | PASS | Corpus loaded (135 docs) |
-| KDAT-002C | 186 | **FAIL** | Spec-compliant; 4 real system bugs found |
-| **KDAT-002D** | **186** | **PASS** | Bugs fixed; canonical result |
+| keystone-core/agent-v0-pre (formerly KDAT-002B) | 66 | PASS | Corpus loaded (135 docs) |
+| keystone-core/agent-v0 (formerly KDAT-002C) | 186 | **FAIL** | Spec-compliant; 4 real system bugs found |
+| **keystone-core/agent-v1** | **186** | **PASS** | Bugs fixed; canonical result |
 
-**KDAT-002D is the canonical citable result for the KDAT-002 milestone.**
+**keystone-core/agent-v1 is the canonical citable result for the keystone-core/agent milestone.**
 
 Prior (FAIL run with 186 cases): [`artifacts/kdat-002c/`](../kdat-002c/)

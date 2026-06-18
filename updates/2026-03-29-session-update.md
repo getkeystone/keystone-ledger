@@ -10,7 +10,7 @@
 ### KDAT-097: Water Utility Holdout Query Set (30 queries)
 **Status:** Proven
 **Evidence:** keystone-experiments commit a650bac. fixtures/water/test_queries.json.
-**Description:** 30-query holdout following KDAT-001B schema. Distribution: 15 retrieval_in_corpus, 5 acl_denied, 5 fail_closed_ooc, 3 temporal, 1 latency, 1 audit_integrity. 4 test users mapped to Ontario operator certification classes (I-IV). Every ACL denial case maps to a restricted document in the corpus.
+**Description:** 30-query holdout following keystone-core/retrieval-v1 (formerly KDAT-001B) schema. Distribution: 15 retrieval_in_corpus, 5 acl_denied, 5 fail_closed_ooc, 3 temporal, 1 latency, 1 audit_integrity. 4 test users mapped to Ontario operator certification classes (I-IV). Every ACL denial case maps to a restricted document in the corpus.
 
 ### KDAT-098: Water Utility Seed Data (24 documents, 4 users, 3 groups)
 **Status:** Proven

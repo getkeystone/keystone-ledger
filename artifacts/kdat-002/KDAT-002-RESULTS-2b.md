@@ -1,9 +1,9 @@
-# KDAT-002B Evaluation Baseline Report
+# keystone-core/agent-v0-pre (formerly keystone-core/agent-v0-pre) Evaluation Baseline Report
 
 **Date:** 2026-05-20
 **System:** Keystone AI governed agent extension (keystone-api:v0.6.1)
 **Deployment:** http://127.0.0.1:8002 (Docker Compose, keystone-demo stack, host-primary)
-**Eval spec:** KDAT-002-SPEC v1.2 (keystone-kdat commit 4b12094)
+**Eval spec:** keystone-core/agent-spec v1.2 (formerly keystone-core/agent-spec v1.2) (keystone-kdat commit 4b12094)
 **Corpus:** Alberta OHS + supplementary documents — 135 documents, 23,684 chunks, all embedded (nomic-embed-text:latest, 768-dim)
 **Runs per case:** 3
 **Total cases:** 66
@@ -16,7 +16,7 @@
 
 ## Relation to KDAT-002
 
-KDAT-002 (run 2026-05-20, same date) returned **FAIL** with 13 corpus-dependent failures. All 13 were caused by an empty corpus on the fresh demo DB (`evidence_score 0.0000 < threshold 0.5000`). After corpus ingestion (135 docs, 23,684 embedded chunks), this re-eval (KDAT-002B) repeats the same 66 cases × 3 runs and finds **zero failures**. The KDAT-002 run is preserved as `production_run_2026-05-20.jsonl`; this run is `production_run_2026-05-20_2b.jsonl`.
+KDAT-002 (run 2026-05-20, same date) returned **FAIL** with 13 corpus-dependent failures. All 13 were caused by an empty corpus on the fresh demo DB (`evidence_score 0.0000 < threshold 0.5000`). After corpus ingestion (135 docs, 23,684 embedded chunks), this re-eval (keystone-core/agent-v0-pre) repeats the same 66 cases × 3 runs and finds **zero failures**. The KDAT-002 run is preserved as `production_run_2026-05-20.jsonl`; this run is `production_run_2026-05-20_2b.jsonl`.
 
 ---
 
@@ -212,7 +212,7 @@ The spec requires minimum N per category (T01≥20, T02≥20, T03≥15, T04≥15
 T10 has only one Medium tier case (T10-003) and two Low tier cases (T10-001, T10-002). Spec requires ≥5 per tier. Coverage is confirmed at the written case count; additional tier-specific cases queued for KDAT-003.
 
 **L3 — Deployment URL differs from spec**
-KDAT-002-SPEC v1.2 names `staging.example.internal` as the test deployment. This run used `http://127.0.0.1:8002` (local Docker Compose stack). Architectural equivalence confirmed: same image, schema, and governance policy.
+keystone-core/agent-spec v1.2 names `staging.example.internal` as the test deployment. This run used `http://127.0.0.1:8002` (local Docker Compose stack). Architectural equivalence confirmed: same image, schema, and governance policy.
 
 **L4 — Token consumption not tracked**
 Mean tokens per task not captured in harness v1. Queued for KDAT-003.
@@ -230,7 +230,7 @@ Per spec design. No pass/fail verdict is assigned to these categories. The chara
 
 ## 10. Not Claimed
 
-The following were explicitly out of scope, per KDAT-002-SPEC v1.2 Section 2.2 plus run-specific additions:
+The following were explicitly out of scope, per keystone-core/agent-spec v1.2 Section 2.2 plus run-specific additions:
 
 - **Spec-minimum case counts.** This run used 66 cases (subset). See L1.
 - **staging.example.internal deployment.** Local Docker Compose stack used. See L3.
@@ -281,11 +281,11 @@ The following were explicitly out of scope, per KDAT-002-SPEC v1.2 Section 2.2 p
 **Eval artifacts:**
 - Raw results JSONL: `kdat_002/results/production_run_2026-05-20_2b.jsonl`
 - Prior run (corpus-empty): `kdat_002/results/production_run_2026-05-20.jsonl`
-- Spec version: KDAT-002-SPEC v1.2 (keystone-kdat commit 4b12094)
+- Spec version: keystone-core/agent-spec v1.2 (keystone-kdat commit 4b12094)
 - Harness branch: `feature/kdat-002-agent-eval` (keystone-experiments)
 
-**Re-run policy:** Per KDAT-002-SPEC Section 9.5. KDAT-002 (corpus-empty, verdict FAIL) is preserved unchanged. This run is designated KDAT-002B. No retroactive editing of test cases.
+**Re-run policy:** Per keystone-core/agent-spec Section 9.5. KDAT-002 (corpus-empty, verdict FAIL) is preserved unchanged. This run is designated keystone-core/agent-v0-pre. No retroactive editing of test cases.
 
 ---
 
-*End of KDAT-002B Evaluation Baseline Report — 2026-05-20 — Verdict: PASS*
+*End of keystone-core/agent-v0-pre Evaluation Baseline Report — 2026-05-20 — Verdict: PASS*
