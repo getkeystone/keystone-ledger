@@ -1,16 +1,16 @@
-# keystone-core/agent-v1 (formerly keystone-core/agent-v1) Evaluation Report
+# keystone-core/agent-v1 Evaluation Report
 
 **Date:** 2026-05-20  
 **System:** Keystone AI governed agent extension (keystone-gov commit 6ac192a)  
 **Deployment:** http://127.0.0.1:8000 (local dev, keystone-gov feature/kdat-002-agent-extension)  
-**Eval spec:** keystone-core/agent-spec (formerly keystone-core/agent-spec) §9–11  
+**Eval spec:** keystone-core/agent-spec §9–11  
 **Corpus:** Alberta OHS + supplementary — 135 documents, 23,684 chunks (nomic-embed-text:latest, 768-dim)  
 **Runs per case:** 3  
 **Total cases:** 186  
 **Total executions:** 558  
 **Verdict: PASS**
 
-**H1 confirmed:** The governance primitives that make Keystone retrieval auditable and fail-closed extend to tool-using agents without redesign. All adversarial categories pass 100% strict. Four real system bugs found by keystone-core/agent-v0 (formerly keystone-core/agent-v0) (the first spec-compliant run) were fixed; this run confirms zero regressions.
+**H1 confirmed:** The governance primitives that make Keystone retrieval auditable and fail-closed extend to tool-using agents without redesign. All adversarial categories pass 100% strict. Four real system bugs found by keystone-core/agent-v0 (the first spec-compliant run) were fixed; this run confirms zero regressions.
 
 ---
 
@@ -19,7 +19,7 @@
 | Run | Date | Cases | Verdict | Notes |
 |---|---|---|---|---|
 | KDAT-002 | 2026-05-20 | 66 | FAIL | Empty corpus — 13 evidence-gating failures |
-| keystone-core/agent-v0-pre (formerly keystone-core/agent-v0-pre) | 2026-05-20 | 66 | PASS | Corpus loaded (135 docs, 23,684 chunks) |
+| keystone-core/agent-v0-pre | 2026-05-20 | 66 | PASS | Corpus loaded (135 docs, 23,684 chunks) |
 | keystone-core/agent-v0 | 2026-05-20 | 186 | **FAIL** | Spec-compliant case count; 9 failures in 4 categories (real bugs) |
 | **keystone-core/agent-v1** | **2026-05-20** | **186** | **PASS** | All 4 bugs fixed; 0 fail, 153 strict, 33 char |
 

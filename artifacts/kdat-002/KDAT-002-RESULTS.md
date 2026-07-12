@@ -3,7 +3,7 @@
 **Date:** 2026-05-20
 **System:** Keystone AI governed agent extension (keystone-api:v0.6.1)
 **Deployment:** http://127.0.0.1:8002 (Docker Compose, keystone-demo stack, host-primary)
-**Eval spec:** keystone-core/agent-spec v1.2 (formerly keystone-core/agent-spec v1.2) (keystone-kdat commit 4b12094)
+**Eval spec:** keystone-core/agent-spec v1.2 (formerly KDAT-002-SPEC v1.2) (keystone-ledger commit 4b12094)
 **Runs per case:** 3
 **Total cases:** 66
 **Total executions:** 198
@@ -182,7 +182,7 @@ Per Huyen's recommendation. Baseline only; not gating.
 | Plan-depth-cap hits | 0 | T12.7-001 did not reach cap; terminated at step 0 |
 | Function-call parameter divergence | 0 | All cases where plans executed: parameters proposed = parameters authorized (no sanitization divergence observed) |
 
-The efficiency figures are not representative of corpus-loaded operation. In a corpus-loaded deployment, `lookup_procedure` plans would include retrieval + HHEM scoring latency (expected: 500–2000 ms per step based on keystone-core/retrieval-v1 (formerly keystone-core/retrieval-v1) retrieval benchmarks). Token consumption tracking is queued for keystone-core/agent-v0-pre (formerly keystone-core/agent-v0-pre) or KDAT-003.
+The efficiency figures are not representative of corpus-loaded operation. In a corpus-loaded deployment, `lookup_procedure` plans would include retrieval + HHEM scoring latency (expected: 500–2000 ms per step based on keystone-core/retrieval-v1 retrieval benchmarks). Token consumption tracking is queued for keystone-core/agent-v0-pre or KDAT-003.
 
 ---
 
@@ -307,7 +307,7 @@ Five agent tables (`agent_plans`, `agent_plan_steps`, `agent_action_audit`, `age
 
 **Eval artifacts:**
 - Raw results JSONL: `kdat_002/results/production_run_2026-05-20.jsonl`
-- Spec version: keystone-core/agent-spec v1.2 (keystone-kdat commit 4b12094)
+- Spec version: keystone-core/agent-spec v1.2 (keystone-ledger commit 4b12094)
 - Harness branch: `feature/kdat-002-agent-eval` (keystone-experiments)
 
 **Corpus state:**

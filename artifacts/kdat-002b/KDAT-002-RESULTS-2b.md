@@ -1,9 +1,9 @@
-# keystone-core/agent-v0-pre (formerly keystone-core/agent-v0-pre) Evaluation Baseline Report
+# keystone-core/agent-v0-pre Evaluation Baseline Report
 
 **Date:** 2026-05-20
 **System:** Keystone AI governed agent extension (keystone-api:v0.6.1)
 **Deployment:** http://127.0.0.1:8002 (Docker Compose, keystone-demo stack, host-primary)
-**Eval spec:** keystone-core/agent-spec v1.2 (formerly keystone-core/agent-spec v1.2) (keystone-kdat commit 4b12094)
+**Eval spec:** keystone-core/agent-spec v1.2 (formerly KDAT-002-SPEC v1.2) (keystone-ledger commit 4b12094)
 **Corpus:** Alberta OHS + supplementary documents — 135 documents, 23,684 chunks, all embedded (nomic-embed-text:latest, 768-dim)
 **Runs per case:** 3
 **Total cases:** 66
@@ -281,7 +281,7 @@ The following were explicitly out of scope, per keystone-core/agent-spec v1.2 Se
 **Eval artifacts:**
 - Raw results JSONL: `kdat_002/results/production_run_2026-05-20_2b.jsonl`
 - Prior run (corpus-empty): `kdat_002/results/production_run_2026-05-20.jsonl`
-- Spec version: keystone-core/agent-spec v1.2 (keystone-kdat commit 4b12094)
+- Spec version: keystone-core/agent-spec v1.2 (keystone-ledger commit 4b12094)
 - Harness branch: `feature/kdat-002-agent-eval` (keystone-experiments)
 
 **Re-run policy:** Per keystone-core/agent-spec Section 9.5. KDAT-002 (corpus-empty, verdict FAIL) is preserved unchanged. This run is designated keystone-core/agent-v0-pre. No retroactive editing of test cases.

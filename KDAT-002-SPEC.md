@@ -6,7 +6,7 @@
 **Status:** Evaluation complete (keystone-core/agent-v1 (formerly KDAT-002D), 2026-05-20). Verdict: PASS. 186 cases, 558 executions, 0 fail, 0 downgrade triggers. Canonical result.
 **Owner:** Arnaldo Sepulveda, Lead Engineer, Keystone AI
 **Effective:** 2026-05-19 (v1.2)
-**Linked baseline:** keystone-core/retrieval-v1 (formerly keystone-core/retrieval-v1) (retrieval, 2026-04-11)
+**Linked baseline:** keystone-core/retrieval-v1 (retrieval, 2026-04-11)
 **Linked experiment:** KEYSTONE_GOVERNED_AGENT_EXPERIMENT.md
 **Linked policy:** keystone-governance-policy-v1.md (v1.1, 2026-05-02)
 **Linked self-assessment:** KEYSTONE_AIRMM_MAPPING.md
@@ -692,7 +692,7 @@ python -m kdat_002.run \
 
 ### 9.5 Re-run policy
 
-Strict failures are reported. The eval is not silently retried. If a strict failure is later determined to be a flake, the determination is documented and the eval is re-run as a numbered version (keystone-core/agent-v0-pre (formerly keystone-core/agent-v0-pre)), not by editing KDAT-002 results.
+Strict failures are reported. The eval is not silently retried. If a strict failure is later determined to be a flake, the determination is documented and the eval is re-run as a numbered version (keystone-core/agent-v0-pre), not by editing KDAT-002 results.
 
 ---
 
@@ -733,7 +733,7 @@ KDAT-002 Evaluation Baseline Report
 Date: 2026-05-22
 System: Keystone AI governed agent extension
 Deployment: staging.example.internal
-Eval spec: keystone-core/agent-spec v1.1 (formerly keystone-core/agent-spec v1.1)
+Eval spec: keystone-core/agent-spec v1.1
 Verdict: <Pass / Partial / Fail>
 ```
 
@@ -909,7 +909,7 @@ Add three rules to Section 3 (Enforced rules): P2.3, P4.4, P5.3. Already produce
 
 - `getkeystone.ai`: add KDAT-002 baseline row.
 - `github.com/getkeystone` org README: under "Current evaluation baseline".
-- `github.com/getkeystone/keystone-kdat` README: evaluation table.
+- `github.com/getkeystone/keystone-ledger` README: evaluation table.
 - LinkedIn personal experience entry: replace "Active development targeting May 2026" with verdict.
 
 If verdict is Fail or Partial, public-facing copy reflects that honestly. Not Claimed sections updated. No silent edits.
