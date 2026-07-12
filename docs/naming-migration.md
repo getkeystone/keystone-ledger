@@ -18,6 +18,15 @@ Each component carries independent version lineage. Old versions stay published 
 | KDAT-002D | keystone-core/agent-v1 | Agent eval, 186 cases, 558 executions, 0 failures (canonical) |
 | KDAT-002 | keystone-core/agent | Governed agent extension project |
 
+## Platform extension entries
+
+These entries belong to the platform extension tier and have no KDAT predecessor. They use component-named artifact folders under `artifacts/`.
+
+| Eval entry | Artifact folder | Verdict |
+|---|---|---|
+| keystone-engage/agent-v0 | artifacts/keystone-engage-agent-v0/ | FAIL (96/100), preserved |
+| keystone-engage/agent-v1 | artifacts/keystone-engage-agent-v1/ | PASS (100/100), canonical |
+
 ## Why
 
 Old KDAT-NNNL codes required a lookup table. New naming is self-describing.

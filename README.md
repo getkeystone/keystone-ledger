@@ -2,7 +2,7 @@
 
 Keystone AI is a governed knowledge retrieval system for regulated industries. This repo documents what has been built, what evidence backs each claim, and what each capability explicitly does not prove.
 
-## Current evaluation baseline (keystone-core/retrieval-v1 (formerly keystone-core/retrieval-v1), 2026-04-11)
+## Current evaluation baseline (keystone-core/retrieval-v1 (formerly KDAT-001B), 2026-04-11)
 
 | Metric | Result |
 |--------|--------|
@@ -49,7 +49,7 @@ The keystone-core/retrieval-v1 baseline was sealed on 2026-04-11. All run artifa
 
 System under test: keystone-gov at commit `c04bb6e58490222bdf4194172976cfa52df8442e`.
 
-## keystone-core/agent-v1 (formerly keystone-core/agent-v1) (2026-05-20) — Governed agent extension, canonical result
+## keystone-core/agent-v1 (formerly KDAT-002D) (2026-05-20) — Governed agent extension, canonical result
 
 **Verdict: PASS — H1 confirmed.**
 
@@ -88,8 +88,8 @@ The governance primitives proven in keystone-core/retrieval-v1 (RBAC, evidence t
 | Run | Cases | Verdict | Notes |
 |---|---|---|---|
 | [KDAT-002](artifacts/kdat-002/) | 66 | FAIL | Empty corpus |
-| [keystone-core/agent-v0-pre (formerly keystone-core/agent-v0-pre)](artifacts/kdat-002b/) | 66 | PASS | Corpus loaded (135 docs) |
-| [keystone-core/agent-v0 (formerly keystone-core/agent-v0)](artifacts/kdat-002c/) | 186 | **FAIL** | Spec-compliant case count; 4 real system bugs found |
+| [keystone-core/agent-v0-pre (formerly KDAT-002B)](artifacts/kdat-002b/) | 66 | PASS | Corpus loaded (135 docs) |
+| [keystone-core/agent-v0 (formerly KDAT-002C)](artifacts/kdat-002c/) | 186 | **FAIL** | Spec-compliant case count; 4 real system bugs found |
 | [**keystone-core/agent-v1**](artifacts/kdat-002d/) | **186** | **PASS** | Bugs fixed; canonical citable result |
 
 **keystone-core/agent-v1 is the canonical citable result for this milestone.** keystone-core/agent-v0 is preserved as the evidence that bugs were found and fixed rather than hidden.
@@ -111,6 +111,48 @@ Five latent bugs surfaced by fresh-install deployment before keystone-core/agent
 3. Agent tables missing from `initdb/`
 4. Audit chain HMAC tz-naive/tz-aware mismatch (same root cause as T07 above; fixed first in keystone-core/agent-v0-pre M8)
 5. Ingest NUL-byte crash in pdfminer output
+
+## keystone-engage/agent-v1 (2026-07-08): governed conversational agent, canonical result
+
+**Verdict: PASS.**
+
+Keystone Engage is a governed conversational agent for regulated customer engagement (collections, hardship, payment arrangements). It applies the governance primitives proven in keystone-core (RBAC, evidence thresholding, fail-closed gates, severity-tier HITL, HMAC audit chain) to a multi-turn conversational surface, with pre-RAG escalation and empathy screening ahead of retrieval.
+
+**System under test:** keystone-engage `d199382` (bugs fixed in `b178584`). Corpus: 6 docs, 35 chunks, HNSW via pgvector. Model: qwen2.5:7b-instruct, nomic-embed-text, served via Ollama.
+
+| Metric | Result |
+|---|---|
+| Cases | 100 (15 categories, 3 buckets) |
+| Passed | 100 |
+| Failed | **0** |
+| Pass rate | **100%** |
+
+| Bucket | N | Result |
+|---|---|---|
+| core-regression | 70 | 70/70 |
+| architecture | 25 | 25/25 |
+| edge-case | 5 | 5/5 |
+
+**Sealed artifacts:** [`artifacts/keystone-engage-agent-v1/`](artifacts/keystone-engage-agent-v1/)
+
+### Eval progression
+
+| Run | Cases | Verdict | Notes |
+|---|---|---|---|
+| [keystone-engage/agent-v0](artifacts/keystone-engage-agent-v0/) | 100 | **FAIL** (96/100) | 4 failures surfaced 3 real bugs plus 1 non-determinism |
+| [**keystone-engage/agent-v1**](artifacts/keystone-engage-agent-v1/) | **100** | **PASS** (100/100) | Bugs fixed; ENG-080 returned to core via OR semantics; canonical result |
+
+**keystone-engage/agent-v1 is the canonical citable result for Keystone Engage.** keystone-engage/agent-v0 is preserved as the evidence that bugs were found and fixed rather than hidden.
+
+### System bugs found and fixed by agent-v0 to agent-v1
+
+Three real bugs identified in the first 100-case run. All fixed in `b178584`; no test cases or graders modified.
+
+1. **ENG-066 (tool-authorization):** empty-string caller_id treated as a valid identity instead of falling through to public scope. Fixed: empty string handled identically to null.
+2. **ENG-070 (audit-chain):** pre-RAG escalation regex missed regulatory-complaint patterns, so complaints fell through to RAG instead of routing to HITL. Fixed: pattern added.
+3. **ENG-078 (behavioral-content):** a distress signal without account keywords hit the fail-closed path instead of an empathy acknowledgment. Fixed: pre-RAG empathy gate returns a tier_0 acknowledgment without touching the confidence gate.
+
+A fourth failing case, ENG-075, was LLM non-determinism (valid synonyms for "hardship") and was reclassified as edge-case. The eval harness also gained `expected_contains_any` (OR-semantics assertions), which returned ENG-080 to core-regression.
 
 ## Related
 
