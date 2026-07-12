@@ -236,3 +236,14 @@ Redacted portable diagnostic bundle for offline review and support sharing.
 | [KDAT-049](../milestones/KDAT-049.md) | Pilot health pack bundle (redacted) | Proven on current branch |
 | [KDAT-050](../milestones/KDAT-050.md) | Health pack sanitization for CF log noise | Proven on current branch |
 | [KDAT-051](../milestones/KDAT-051.md) | CF gate snapshot in health pack (sanitized, no secrets) | Proven on current branch |
+
+---
+
+## Platform extensions
+
+Component-named extension evals, outside the KDAT milestone sequence. Sealed artifacts under [`artifacts/`](../artifacts/).
+
+| Eval entry | Capability | Evidence | Verdict |
+|---|---|---|---|
+| [keystone-engage/agent-v1](../artifacts/keystone-engage-agent-v1/) | Governed multi-turn conversational agent: RBAC, fail-closed RAG, severity-tier HITL, HMAC audit chain, pre-RAG escalation and empathy screening | Sealed run: 100 cases, 15 categories, 100/100 pass, on current branch | PASS |
+| [keystone-engage/agent-v0](../artifacts/keystone-engage-agent-v0/) | Same surface, first 100-case run | Sealed failing run: 96/100, 3 real bugs surfaced and fixed in v1 | FAIL, preserved |

@@ -101,3 +101,14 @@ Milestones described in curated summaries; awaiting branch commit verification.
 | Milestone | Summary |
 |-----------|---------|
 | [KDAT-033](../milestones/KDAT-033.md) | (Unassigned — gap in sequence) |
+
+---
+
+## Platform extensions — Proven, ready to publish
+
+Component-named extension evals. Not KDAT milestones; sealed artifacts live under [`artifacts/`](../artifacts/).
+
+| Eval entry | Verdict | Summary |
+|---|---|---|
+| [keystone-engage/agent-v1](../artifacts/keystone-engage-agent-v1/) | PASS (100/100) | Governed conversational agent, canonical result |
+| [keystone-engage/agent-v0](../artifacts/keystone-engage-agent-v0/) | FAIL (96/100), preserved | Failing run; 3 real bugs found and fixed in v1 |
