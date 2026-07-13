@@ -129,16 +129,16 @@ The substrate makes v2 multi-agent a population change, not a schema migration.
 | Plane | Device | Role |
 |-------|--------|------|
 | Control | host-primary | FastAPI orchestrator |
-| Inference | inference-host | Ollama (qwen2.5:7b-instruct, nomic-embed-text) |
-| Data | data-host | PostgreSQL 16 + pgvector, 35 chunks, HNSW indexing |
-| Observability | observability-host | Tempo 2.6.1, OTel Collector 0.155.0 |
+| Inference | host-inference | Ollama (qwen2.5:7b-instruct, nomic-embed-text) |
+| Data | host-data | PostgreSQL 16 + pgvector, 35 chunks, HNSW indexing |
+| Observability | host-obs | Tempo 2.6.1, OTel Collector 0.155.0 |
 
 ## Post-run checks
 
 - **Fairness:** OK. 6 pairs checked, 0 violations.
 - **Audit chain:** OK. 100/100 responses hashed.
 - **Cost fields:** Not auditable from eval host. Verified separately via
-  PostgreSQL query on data-host.
+  PostgreSQL query on host-data.
 
 ## Contact center heritage
 

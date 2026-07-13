@@ -87,8 +87,8 @@ touching the fail-closed confidence gate.
 | Plane | Device | Role |
 |-------|--------|------|
 | Control | host-primary | FastAPI orchestrator |
-| Inference | inference-host | Ollama (qwen2.5:7b-instruct, nomic-embed-text) |
-| Data | data-host | PostgreSQL 16 + pgvector, 35 chunks, HNSW indexing |
+| Inference | host-inference | Ollama (qwen2.5:7b-instruct, nomic-embed-text) |
+| Data | host-data | PostgreSQL 16 + pgvector, 35 chunks, HNSW indexing |
 
 ## Post-run checks
 

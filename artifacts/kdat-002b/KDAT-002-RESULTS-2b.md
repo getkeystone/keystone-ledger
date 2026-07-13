@@ -261,7 +261,7 @@ The following were explicitly out of scope, per keystone-core/agent-spec v1.2 Se
 - keystone-api image: `keystone-api:v0.6.1`
 - PostgreSQL: `pgvector/pgvector:pg16`
 - Ollama: host instance (host-primary), `nomic-embed-text:latest` (768-dim), `qwen2.5:7b-instruct`
-- HHEM-2.1-Open: `/home/arnaldo-admin/.cache/huggingface` (HF_HUB_OFFLINE=1)
+- HHEM-2.1-Open: `/home/user/.cache/huggingface` (HF_HUB_OFFLINE=1)
 - RRF k=60
 
 **Corpus state:**

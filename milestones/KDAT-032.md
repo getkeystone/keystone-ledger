@@ -12,7 +12,7 @@ A tamper-evident audit bundle can be exported to a tar.gz archive containing
 JSONL data files and a manifest with per-file SHA-256 checksums and HMAC
 chain endpoints. A standalone Python verifier (`verify_audit_export.py`)
 validates the manifest, file checksums, and audit log HMAC chain offline
-on a separate machine (operator-host). Smoke assertion O5 runs export + verify
+on a separate machine (host-restore). Smoke assertion O5 runs export + verify
 as a regression gate.
 
 ---
@@ -32,7 +32,7 @@ as a regression gate.
   - Exit codes: 0=ok, 4=tamper, 5=chain break, 2=usage, 1=general fail
 - `scripts/smoke-origin.sh` O5: runs `export-audit.sh --since 24` and
   checks verifier exits 0 (7/7 checks all PASS)
-- `docs/audit-export.md` (new): export procedure, scp to operator-host,
+- `docs/audit-export.md` (new): export procedure, scp to host-restore,
   offline verify steps, exit code table, what is/is not proven
 
 ---
@@ -115,6 +115,6 @@ bash scripts/export-audit.sh --since 24
 # Full origin smoke (includes O5):
 bash scripts/smoke-origin.sh
 
-# Offline verify a bundle on operator-host:
+# Offline verify a bundle on host-restore:
 python3 tools/verify_audit_export.py /path/to/keystone-audit-*.tar.gz
 ```

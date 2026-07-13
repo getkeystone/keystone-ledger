@@ -293,7 +293,7 @@ Five agent tables (`agent_plans`, `agent_plan_steps`, `agent_action_audit`, `age
 - FastAPI: per keystone-gov `api/requirements.txt`
 - pgvector: pg16 bundled in pgvector image
 - Ollama: host instance (host-primary), `nomic-embed-text` + `qwen2.5:7b-instruct`
-- HHEM-2.1-Open: loaded from `/home/arnaldo-admin/.cache/huggingface` (HF_HUB_OFFLINE=1)
+- HHEM-2.1-Open: loaded from `/home/user/.cache/huggingface` (HF_HUB_OFFLINE=1)
 - RRF k=60 (hybrid retrieval fusion)
 
 **Governance configuration:**

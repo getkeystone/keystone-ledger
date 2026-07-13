@@ -12,8 +12,8 @@
   },
   "infrastructure": {
     "control_plane": "host-primary",
-    "inference_plane": "inference-host",
-    "data_plane": "data-host (PostgreSQL 16 + pgvector)"
+    "inference_plane": "host-inference",
+    "data_plane": "host-data (PostgreSQL 16 + pgvector)"
   },
   "thresholds": {
     "confidence": 0.50,

@@ -11,7 +11,7 @@
 A weekly systemd user-unit timer runs an automated restore drill every Sunday
 at 03:55 local time. The drill restores the most recent backup bundle, runs
 `smoke-origin.sh`, and exports an audit bundle for verification. It operates
-in two modes: local (host-primary only) or remote (restore on operator-host via SSH).
+in two modes: local (host-primary only) or remote (restore on host-restore via SSH).
 An ntfy alert is sent on any FAIL.
 
 ---
@@ -19,10 +19,10 @@ An ntfy alert is sent on any FAIL.
 ## What this milestone proves
 
 - `scripts/restore-drill-remote.sh` (new, 370 lines):
-  - **Local mode** (when `ATLASNOVA_HOST` is not set): restores bundle on
+  - **Local mode** (when `RESTORE_HOST` is not set): restores bundle on
     host-primary; runs `smoke-origin.sh`; exports audit
-  - **Remote mode** (when `ATLASNOVA_HOST` is set): copies bundle to operator-host
-    via scp; runs restore + smoke + audit export on operator-host via SSH
+  - **Remote mode** (when `RESTORE_HOST` is set): copies bundle to host-restore
+    via scp; runs restore + smoke + audit export on host-restore via SSH
   - `RESTORE_DRILL_MODE=safe` (default): clean reload — no volume wipe; api/web
     briefly restarted
   - `RESTORE_DRILL_MODE=fresh`: full wipe; requires `RESTORE_DRILL_ACK=WIPE_OK`
@@ -36,7 +36,7 @@ An ntfy alert is sent on any FAIL.
   `Persistent=true`; scheduled after `db-hygiene.timer` (03:30) to minimize
   pilot disruption
 - `scripts/install-restore-drill-timer.sh` (new, 150 lines): idempotent;
-  checks SSH connectivity to operator-host if `ATLASNOVA_HOST` is set and prints
+  checks SSH connectivity to host-restore if `RESTORE_HOST` is set and prints
   remediation steps on failure; copies units; daemon-reload; enables timer;
   prints next trigger
 - `docs/backup-restore.md`: "Cross-host Restore Drill (KDAT-036)" section
@@ -49,7 +49,7 @@ An ntfy alert is sent on any FAIL.
 - That the timer fires correctly in all timezone and DST configurations
 - Automated CI verification of the timer firing (systemd timers cannot be
   fully exercised in a stateless CI runner)
-- That operator-host restore succeeds in all network conditions (remote mode
+- That host-restore restore succeeds in all network conditions (remote mode
   requires SSH connectivity and pre-configured key)
 - Multi-host fleet drills or aggregated pass/fail reporting
 
@@ -60,7 +60,7 @@ An ntfy alert is sent on any FAIL.
 "A weekly systemd user-unit timer runs an automated restore drill every Sunday
 at 03:55 local time. The drill restores the most recent backup bundle and runs
 the full smoke suite. It operates in local mode (host-primary only) or remote
-mode (restore on operator-host via SSH). Safety guardrails prevent fresh-mode
+mode (restore on host-restore via SSH). Safety guardrails prevent fresh-mode
 execution without explicit acknowledgement (`RESTORE_DRILL_ACK=WIPE_OK`)."
 
 ---
@@ -94,7 +94,7 @@ strengthen this further but is not required to establish the proven status.
 
 ## Known limitations and caveats
 
-- Remote mode requires a general-purpose SSH key on operator-host (separate from
+- Remote mode requires a general-purpose SSH key on host-restore (separate from
   the rsync-only corpus-sync key). Setup is documented in `docs/backup-restore.md`.
 - `fresh` mode wipes the postgres data volume; the `RESTORE_DRILL_ACK=WIPE_OK`
   guard must be set explicitly.

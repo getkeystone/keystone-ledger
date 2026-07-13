@@ -36,7 +36,7 @@ confirms the manifest is present and parses as valid JSON.
 
 ## What this milestone does NOT prove
 
-- Cross-host restore (operator-host transfer) — that is KDAT-036
+- Cross-host restore (host-restore transfer) — that is KDAT-036
 - Legacy bundle handling (graceful rejection or opt-in) — that is KDAT-034
 - Config and trust store restoration — that is KDAT-035
 - Hot backup or zero-downtime restore
