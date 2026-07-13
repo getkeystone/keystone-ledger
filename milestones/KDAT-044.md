@@ -30,7 +30,7 @@ enabled or no JWT is available the script exits 0 with a `[SKIP]` line;
   failure
 - KDAT-038 lock (`supervisor-flow-cf.lock`) + KDAT-041 maintenance skip
 - No secrets printed; `CF_FLOW_EMAIL`/`CF_FLOW_NAME` identity overrides supported
-- Default identity: `noreply@getkeystone.ai` (officer, in role config)
+- Default identity: `officer@example.test` (officer, in role config)
 - `smoke-origin.sh O6`: `[SKIP]` when CF disabled or no JWT → smoke still PASSes;
   FAIL only when supervisor-flow-cf.sh exits non-zero
 - `scripts/test_kdat044_supervisor_flow_contract.sh` — **11/11 PASS**:
