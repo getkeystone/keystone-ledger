@@ -33,7 +33,7 @@ Corpus: 53 Alberta OHS safety documents, 2,674 chunks.
 
 **Scope.** Demo-grade remediation. Full taxonomy-based two-stage domain gate (using Alberta OHS Code Parts as the authoritative taxonomy plus a post-retrieval intersection check) remains open and is not yet scheduled.
 
-**Commits.** [38ef89f](https://github.com/getkeystone/keystone-gov/commit/38ef89f) (merge to `dev/keystone-next`).
+**Commits.** `38ef89f` (keystone-gov, merge to `dev/keystone-next`).
 
 ## Sealed artifacts
 
