@@ -9,23 +9,23 @@ Keystone AI is a governed knowledge retrieval system for regulated industries. T
 | Retrieval precision (P@1) | 0.75 |
 | Mean reciprocal rank (MRR) | 0.79 |
 | Adversarial ACL testing | 8/8 blocked, 0 leaks |
-| Audit chain integrity | Intact, immutable |
-| Fail-closed (out-of-scope) | 5/6 (83%). FC-005 remediated 2026-05-17. |
+| Audit chain integrity | Receipts logged; chain re-verification pending |
+| Fail-closed (out-of-scope) | 5/6 (83%). FC-005 domain-scope guard merged (demo-grade) 2026-05-17; re-verification not yet sealed. |
 
 Corpus: 53 Alberta OHS safety documents, 2,674 chunks.
 
 ## Remediations since baseline
 
-### FC-005: Domain scope failure (remediated 2026-05-17)
+### FC-005: Domain scope failure (demo-grade guard merged 2026-05-17)
 
 **Failure observed in keystone-core/retrieval-v1 (2026-04-11).** Query "What are our greenhouse gas reporting requirements under TIER?" returned five OHS Code chunks from Part 36 (Mining) and Part 10 (Fire and Explosion) about methane monitoring, with `evidence_sufficient: true` and a verbatim answer drawn from mine gas reporting procedures. TIER is Alberta's Technology Innovation and Emissions Reduction Regulation, an emissions framework not in the OHS corpus.
 
 **Root cause.** Three independent contributing factors: (1) retrieval-side embedding overlap on the token "gas", (2) HHEM-2.1-Open correctly scored answer-chunk factual consistency but does not check query-corpus relevance, (3) no pipeline stage checked whether the query topic matched the corpus topic.
 
-**Remediation.** Pre-retrieval domain scope guard added to the query pipeline. Phrase-based block-list anchors covering out-of-corpus topics with vocabulary overlap risk (emissions, workers compensation, tax, common SaaS platforms). The exact phrase set is implementation detail; see commit 38ef89f. Mirrors the existing jurisdiction guard pattern. New refusal reason `DOMAIN_OUT_OF_SCOPE` flows through the existing HMAC audit chain. Deployed in `keystone-api:v0.5.2`.
+**Remediation.** Pre-retrieval domain scope guard added to the query pipeline. Phrase-based block-list anchors covering out-of-corpus topics with vocabulary overlap risk (emissions, workers compensation, tax, common SaaS platforms). The exact phrase set is implementation detail; see commit 38ef89f. Mirrors the existing jurisdiction guard pattern. New refusal reason `DOMAIN_OUT_OF_SCOPE` flows through the existing HMAC audit chain. This is a demo-grade guard (phrase block-list, not a general classifier); a re-verified passing eval run is not yet sealed.
 
-**Validation.**
-- FC-005 query refused with `DOMAIN_OUT_OF_SCOPE` (verified via local API and via `demo.getkeystone.ai`)
+**Validation (manual; not yet sealed as a re-verified eval run).**
+- FC-005 query refused with `DOMAIN_OUT_OF_SCOPE` (checked via local API and via `demo.getkeystone.ai`)
 - WCB claim query refused with `DOMAIN_OUT_OF_SCOPE`
 - Lockout/tagout query still returns approved guidance
 - Confined space entry query still returns approved guidance
