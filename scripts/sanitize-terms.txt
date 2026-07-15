@@ -1,0 +1,18 @@
+# sanitize-terms.txt — retired/forbidden claim strings (EX-008). Data only.
+#
+# One forbidden phrase per line. Blank lines and lines starting with # are ignored.
+# The pre-push hook greps the externally-citable surfaces (README.md,
+# PUBLIC_PROOF_INDEX.md) for each phrase; any hit blocks the push (fail-closed).
+#
+# Scope: this is the mechanical "covers part" of claims enforcement — it catches
+# a KNOWN retired claim regressing back into public copy. It cannot judge whether
+# a NEW claim's evidence is real; that stays human (the operator sets each row's
+# status in docs/claims-matrix.md by adjudicating sealed evidence).
+#
+# Not scanned (they legitimately contain these strings): docs/claims-matrix.md
+# (the tracked matrix), this file, and sealed artifacts/ and milestones/.
+
+FC-005 remediated
+eighteen months
+Counsel 30/30 sealed
+audit chain intact

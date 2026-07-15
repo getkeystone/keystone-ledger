@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+#
+# pre-push — Keystone claims-matrix publication gate (fail-closed).
+#
+# Two mechanical, fail-closed checks, then push proceeds:
+#   1. Status gate  — every cited claim in the promoted matrix
+#      (docs/claims-matrix.md) must be OK; a BROKEN / UNSOURCED / CHECK / STALE /
+#      FIXING row blocks the push (scripts/verify-claims-matrix.sh).
+#   2. Sanitize     — no retired claim string (scripts/sanitize-terms.txt) may
+#      appear on the externally-citable surfaces (scripts/sanitize-check.sh,
+#      also runnable manually before publish).
+# What stays human: deciding a row's status in the first place — whether a
+# claim's sealed evidence actually supports OK. Automation cannot judge that.
+#
+# Install (from repo root):
+#   ln -sf ../../scripts/git-hooks/pre-push .git/hooks/pre-push
+#   # or: cp scripts/git-hooks/pre-push .git/hooks/pre-push && chmod +x .git/hooks/pre-push
+#
+# Bootstrap bypass (use consciously, e.g. to push the gate itself before the
+# matrix is green): git push --no-verify
+#
+set -euo pipefail
+
+root="$(git rev-parse --show-toplevel)"
+gate="$root/scripts/verify-claims-matrix.sh"
+
+# Fail closed: if the gate is missing or unrunnable, refuse the push.
+if [[ ! -f "$gate" ]]; then
+  echo "pre-push GATE: claims-matrix verifier not found at $gate — refusing push (fail-closed)." >&2
+  exit 1
+fi
+
+# Runs against docs/claims-matrix.md by default (the promoted July matrix).
+# Non-zero exit here aborts the push.
+bash "$gate"
+
+# ── Check 2: sanitization (EX-008) — retired claims must not regress into copy ─
+# Delegates to scripts/sanitize-check.sh (the same control, runnable by hand
+# before publish). Data-only term list in scripts/sanitize-terms.txt. Covers the
+# mechanizable part; judging a NEW claim's evidence stays human (see header).
+sanitize="$root/scripts/sanitize-check.sh"
+if [[ ! -f "$sanitize" ]]; then
+  echo "pre-push GATE: sanitizer not found at $sanitize — refusing push (fail-closed)." >&2
+  exit 1
+fi
+# Non-zero exit here (a retired term on a citable surface) aborts the push.
+bash "$sanitize"
