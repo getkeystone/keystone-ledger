@@ -3,3 +3,6 @@
 *.swo
 *~
 graphify-out/
+
+# Internal-only release runbook — kept out of this public repo (moved to the vault).
+docs/RELEASE_PROTOCOL.md
