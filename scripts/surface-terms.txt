@@ -1,0 +1,17 @@
+# surface-terms.txt — raw job-search "apparatus" surface names that must not
+# appear on the PUBLIC claims surface. Data only. One term per line; blank lines
+# and lines starting with # are ignored. Matched case-insensitively as fixed
+# substrings.
+#
+# The public claims-matrix records WHERE a claim appears using a generalized
+# label ("application materials"); this guard fails a push if a raw surface name
+# regresses in. Prevention only — it neither rewrites history nor judges claims.
+# Scanned by scripts/check-surface-terms.sh: docs/claims-matrix.md, README.md,
+# PUBLIC_PROOF_INDEX.md.
+
+Post #1
+cover letter
+resume
+blurb
+private pass
+high-stakes send

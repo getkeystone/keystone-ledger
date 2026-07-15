@@ -45,3 +45,15 @@ if [[ ! -f "$sanitize" ]]; then
 fi
 # Non-zero exit here (a retired term on a citable surface) aborts the push.
 bash "$sanitize"
+
+# ── Check 3: generalized-surface guard — raw job-search apparatus (Post #1,
+# cover letter, resume, blurb, private pass, high-stakes send) must not re-enter
+# the public claims surface. Data-only list in scripts/surface-terms.txt; scans
+# docs/claims-matrix.md + the citable surfaces. Prevention only; no history rewrite.
+surface="$root/scripts/check-surface-terms.sh"
+if [[ ! -f "$surface" ]]; then
+  echo "pre-push GATE: surface guard not found at $surface — refusing push (fail-closed)." >&2
+  exit 1
+fi
+# Non-zero exit here (a raw surface name on the public claims surface) aborts the push.
+bash "$surface"
