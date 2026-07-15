@@ -1,0 +1,14 @@
+Merge FC-005 domain scope guard
+
+Demo-grade pre-retrieval gate refusing out-of-corpus queries
+(emissions regulations, workers comp, tax, IT procurement).
+
+Closes FC-005 from KDAT-001B. Validated locally on application-host:
+- FC-005 query refused with DOMAIN_OUT_OF_SCOPE
+- WCB claim query refused with DOMAIN_OUT_OF_SCOPE
+- lockout/tagout still approves
+- confined space entry still approves
+- audit chain HMAC preserved, sources empty on refusal
+
+Full taxonomy-based two-stage gate scoped for KDAT-002.
+
