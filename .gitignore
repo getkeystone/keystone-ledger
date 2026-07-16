@@ -4,5 +4,7 @@
 *~
 graphify-out/
 
-# docs/ publishes lowercase-hyphenated files; UPPERCASE-named docs are local working notes, kept out of the repo.
+# Convention: docs/ publishes only lowercase-hyphenated files today, so this uppercase-scoped
+# rule hides no published doc — safe as-is. If an UPPERCASE-named published doc is ever moved
+# into docs/, narrow this rule then.
 docs/[A-Z]*.md
