@@ -30,3 +30,9 @@ Label your issue with one of: `factual-error`, `status-correction`, `overclaim`.
 ## Publication policy
 
 See [docs/publication-policy.md](docs/publication-policy.md).
+
+**Local gate (fresh clone).** The policy is enforced by a fail-closed pre-push
+hook (claims-matrix status, retired-term sanitizer, raw-surface guard). There is
+no CI backstop, so install it once after cloning:
+
+    ln -sf ../../scripts/git-hooks/pre-push .git/hooks/pre-push
