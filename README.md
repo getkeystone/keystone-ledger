@@ -44,7 +44,7 @@ The keystone-core/retrieval-v1 baseline was sealed on 2026-04-11. All run artifa
 | [`artifacts/kdat-001B/report.md`](artifacts/kdat-001B/report.md) | Human-readable summary with per-test results |
 | [`artifacts/kdat-001B/results.json`](artifacts/kdat-001B/results.json) | Machine-readable per-test scores |
 | [`artifacts/kdat-001B/run_metadata.json`](artifacts/kdat-001B/run_metadata.json) | SUT commit, model versions, thresholds, dataset/config hashes |
-| [`artifacts/kdat-001B/audit_chain_dump.json`](artifacts/kdat-001B/audit_chain_dump.json) | Full HMAC chain (30 entries, 29 links) for chain verification |
+| [`artifacts/kdat-001B/audit_chain_dump.json`](artifacts/kdat-001B/audit_chain_dump.json) | Audit receipts logged (30 entries); hash-chain fields (`entry_hash`/`previous_hash`) empty pending re-seal |
 | [`artifacts/kdat-001B/raw_responses/`](artifacts/kdat-001B/raw_responses/) | 30 raw API responses (8 RQ, 6 FC, 8 ACL paired, 8 ADV) |
 
 System under test: keystone-gov at commit `c04bb6e58490222bdf4194172976cfa52df8442e`.

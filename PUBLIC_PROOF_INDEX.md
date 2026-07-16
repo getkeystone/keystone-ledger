@@ -13,7 +13,7 @@ Generated: 2026-07-15. Public repos only (keystone-ledger, keystone-verify).
 |---|---|---|
 | P@1 = 0.75, MRR = 0.79 | retrieval-v1 sealed run | github.com/getkeystone/keystone-ledger |
 | 8/8 adversarial ACL probes blocked, 0 leaks | retrieval-v1 | keystone-ledger |
-| Fail-closed 5/6 (83%); FC-005 domain-scope guard merged (demo-grade), re-verification not yet sealed | retrieval-v1 + README §FC-005 | keystone-ledger#fc-005-domain-scope-failure-remediated-2026-05-17 |
+| Fail-closed 5/6 (83%); FC-005 domain-scope guard merged (demo-grade), re-verification not yet sealed | retrieval-v1 + README §FC-005 | keystone-ledger#fc-005-domain-scope-failure-demo-grade-guard-merged-2026-05-17 |
 | 53 documents, 2,674 chunks; audit receipts logged (chain re-verification pending) | retrieval-v1 | keystone-ledger |
 
 ## Agent evaluation

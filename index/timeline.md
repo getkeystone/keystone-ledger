@@ -40,8 +40,8 @@ delivery sequence. Branch commits are not directly available for these.
 ## KDAT-011 grouping note
 
 The delivery table in the evidence log treats KDAT-011 as a single grouped
-milestone with commits in keystone-console (`3112590`) and keystone-deploy
-(`1f22624`), both dated 2026-03-13. The curated summary subdivides this into:
+milestone with commits in keystone-console (private repo) and keystone-deploy
+(private repo), both dated 2026-03-13. The curated summary subdivides this into:
 
 - **KDAT-011A**: Demo Mode toggle + safe failure UX
 - **KDAT-011B**: ProcedureCard presentation
@@ -50,7 +50,7 @@ milestone with commits in keystone-console (`3112590`) and keystone-deploy
 This subdivision is a narrative description, not commit-level evidence. The
 011A, 011B, 011C pages carry "Curated summary" evidence class. Only 011C has
 partial branch evidence (admin-only label gate via check-dist-leaks.sh and
-the `a377ff8` / `b026186` console commits).
+the keystone-console (private repo) commits).
 
 Do not conflate the grouped KDAT-011 delivery table entry with the sub-milestone
 pages as if they were independently proven milestones.
@@ -110,11 +110,11 @@ pages as if they were independently proven milestones.
 
 - Branch: lrfd-backend-bootstrap
 - Log generated: 2026-03-14T13:27:36Z (initial); extended 2026-03-14 for KDAT-022–026; extended 2026-03-14 for KDAT-027; extended 2026-03-15 for KDAT-028–037; extended 2026-03-16 for KDAT-038–047; extended 2026-03-16 for KDAT-048–051
-- keystone-gov HEAD at KDAT-048–051 extension: `c0a9a27`
-- keystone-console HEAD at KDAT-048–051 extension: `3e4f589`
-- keystone-deploy HEAD at KDAT-048–051 extension: `bcf7a9f` (includes KDAT-046–051 deliveries)
-- Prior HEAD SHAs (KDAT-038–047 extension): gov `c0a9a27`, console `3e4f589`, deploy `8bbb03f`
-- Prior HEAD SHAs (KDAT-028–037 extension): gov `c0a9a27`, console `3e4f589`, deploy `94e71ec`
-- Prior HEAD SHAs (KDAT-027 extension): gov `c0a9a27`, console `3e4f589`, deploy `36fe893`
-- Prior HEAD SHAs (KDAT-022–026 extension): gov `b4b34c8`, console `b254491`, deploy `3d27116`
+- keystone-gov HEAD at KDAT-048–051 extension: (private repo)
+- keystone-console HEAD at KDAT-048–051 extension: (private repo)
+- keystone-deploy HEAD at KDAT-048–051 extension: (private repo) (includes KDAT-046–051 deliveries)
+- Prior HEAD SHAs (KDAT-038–047 extension): gov (private repo), console (private repo), deploy (private repo)
+- Prior HEAD SHAs (KDAT-028–037 extension): gov (private repo), console (private repo), deploy (private repo)
+- Prior HEAD SHAs (KDAT-027 extension): gov (private repo), console (private repo), deploy (private repo)
+- Prior HEAD SHAs (KDAT-022–026 extension): gov (private repo), console (private repo), deploy (private repo)
 - Prior HEAD SHAs (initial log): gov `93aa470`, console `8f7abd5`, deploy `3dbaaa0`

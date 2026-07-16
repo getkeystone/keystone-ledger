@@ -32,7 +32,7 @@
 
 ### KDAT-092: COR Compliance Console UI
 **Status:** Proven
-**Evidence:** keystone-console commits 0cc1e8d, 68dfd70. Live at dev.example.internal/compliance and demo.getkeystone.ai/compliance.
+**Evidence:** keystone-console commits 0cc1e8d, 68dfd70. Deployed to pilot and demo environments.
 **Description:** Full compliance dashboard: checklist selector, "Run Assessment" button, element cards (E01-E14) with green/amber/red scoring (>=80/50-79/<50), expandable per-query evidence details, assessment history table. Authority-only navigation gate.
 
 ### KDAT-093: Evidence Threshold Calibration
